@@ -1,4 +1,32 @@
-<tw-storydata name="The Jupiter Prototype 2" startnode="1" creator="Twine" creator-version="2.2.1" ifid="2178685F-1CDC-4AF1-A5E6-CC6A0EFE7C1A" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+<tw-storydata name="The Jupiter Prototype" startnode="1" creator="Twine" creator-version="2.2.1" ifid="2178685F-1CDC-4AF1-A5E6-CC6A0EFE7C1A" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+body, tw-story {
+	background-color: white; 
+	font-size: 18px;
+  	font-family: 'Dosis', sans-serif;
+    background-color: #d5cfe8;
+    color: black;
+}
+
+tw-passage {}
+
+tw-passage h1 { margin: .2em; }
+
+tw-link {}
+tw-link.visited {}
+tw-sidebar {}
+tw-icon {}
+tw-icon.undo {}
+tw-icon.redo {}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6,10 +34,45 @@
 
 
 
-</script><tw-passagedata pid="1" name="the good place" tags="" position="412,200" size="100,100">&lt;img src=&quot;https://raw.githubusercontent.com/reptilemind/the-jupiter-project/master/working-images/aborigirabbit-a.jpg&quot;&gt;
 
-[[go to THEEE place]]</tw-passagedata><tw-passagedata pid="2" name="go to THEEE place" tags="" position="412,355" size="100,100">&lt;img src=&quot;https://github.com/reptilemind/the-jupiter-project/blob/master/working-images/cave.jpg?raw=true&quot;&gt;
 
-[[go back to the first place again-&gt;the good place]]</tw-passagedata><tw-passagedata pid="3" name="First Place" tags="" position="635,124" size="100,100">[[go to the dumb place-&gt;dumb place]]</tw-passagedata><tw-passagedata pid="4" name="dumb place" tags="" position="590,298" size="100,100">
-[[hop to THEE place-&gt;THEE place]]</tw-passagedata><tw-passagedata pid="5" name="THEE place" tags="" position="590,448" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+
+
+
+
+</script><tw-passagedata pid="1" name="The Warren" tags="" position="367,238" size="100,100">&lt;h1&gt;The Warren&lt;/h1&gt;
+
+&lt;div style=&quot;width: 40%&quot;&gt;&lt;img src=&quot;https://jupiter.tinyplace.org/Cave-Complex-3.svg&quot; style=&quot;position:relative; width: 100%;&quot;&gt;&lt;/div&gt;
+
+This is the place where rabbits go.  I&#39;ve been here before.  We never speak to each other, but we are |aware&gt;[aware] of each other.  We are old sentinals of this place.
+
+I will always be here unless I leave.  I can go any time I want.  Tunnels go off every direction but up.
+
+I can [[sniffle into one of the many tunnels-&gt;The Warren]] or [[climb onto a tree root, to get to one of the larger, upper ones-&gt;Upper Warren]]
+[[There&#39;s a tutorial room that has some of the things you can do-&gt;Tutorial Room]]
+(click-replace: ?aware)[**aware** //(we see each other and know each other&#39;s movements and rhythms//)]</tw-passagedata><tw-passagedata pid="2" name="Upper Warren" tags="" position="386,82" size="100,100">&lt;h1&gt;Upper Warren&lt;/h1&gt;
+
+&lt;img src=&quot;https://jupiter.tinyplace.org/Cave-Complex-1.svg&quot; style=&quot;width: 100%;&quot;&gt;
+
+There are a few things here.  One of them is a pair of pairs of Moon Shoes, rabbit, sized.  If you want to, you can |shoe&gt;[put the Moon Shoes on].
+
+I guess that&#39;s all the things there are, really.
+
+(click-replace: ?shoe)[These boots are made for walking.  Now you can go to the [[secret location-&gt;Secret Location]]]</tw-passagedata><tw-passagedata pid="3" name="Secret Location" tags="" position="514,84" size="100,100">This is the most beautiful secret place.  You should be proud of yourself for having found it.</tw-passagedata><tw-passagedata pid="4" name="Tutorial Room" tags="" position="665,249" size="100,100">Welcome to the first place that you can go to by choice.  There are a few things here.  One of the things is a |poster&gt;[Walker Texas Ranger poster] on the wall, another thing is a |shoe&gt;[Moon Shoe].
+
+{(live: 3s)[
+    (either: &quot;You&#39;re not sure how to feel&quot;, &quot;You&#39;re feeling better now&quot;, &quot;Actually now you&#39;re not feeling so well&quot;, &quot;You&#39;re sure everything will turn out OK&quot;, &quot;There&#39;s a great deal of uncertainty&quot;, &quot;I dearly hope things will be fine&quot;)
+]}
+
+There&#39;s also a book you can |book&gt;[read the text of].
+
+(click: ?poster)[The Walker Texas Ranger poster has a picture of Chuck Norris.  You shouldn&#39;t be too certain that it&#39;s not going to jump up and smack you.
+]
+(click: ?shoe)[These boots are made for walking.  Now you can go to the [[secret location-&gt;Secret Location]]
+]
+|hiddenbooktext)[This is the hidden text of the book, it only appears when the book is rolled over.]
+
+(mouseover: ?book)[(show: ?hiddenbooktext)]
+
+</tw-passagedata></tw-storydata>
 
