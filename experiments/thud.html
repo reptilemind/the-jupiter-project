@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>ShakeTests</title>
+	
+	<style>
+	
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import url('https://fonts.googleapis.com/css?family=Flavors');
+
+body {
+	background-color: #001021; 
+	font-size: 1.1em;
+  	font-family: 'Titillium Web', sans-serif;
+    color: #ADC3D8;
+}
+
+@keyframes impact-thud {
+    0% { transform: scale(1,1) translate(0, 0);}
+   75% { transform: scale(1,1) translate(0, 0);}
+   78% { transform: scale(1.5,1.5) translate(-0.1em, 0);}    
+   81% { transform: scale(0.8,0.8) translate(0, 0);}
+   84% { transform: scale(1.4,1.4) translate(0.2em, 0);}
+   87% { transform: scale(0.9,0.9) translate(0, 0);}
+   90% { transform: scale(1.3,1.3) translate(0.1em, 0);}
+   95% { transform: scale(1,1) translate(0, 0);}
+  100% { transform: scale(1,1) translate(0, 0);}
+}
+
+.thud {
+  margin: 1em;
+  font-size: 8em;
+  color: #9C3108;
+  font-family: 'Flavors', cursive;
+  display: inline-block;
+  animation: impact-thud 2.5s infinite;
+}
+
+span.thud {
+  margin: 0;
+  font-size: 1.1em;
+  font-family: 'Flavors', cursive;
+  display: inline-block;
+}
+
+	</style>
+	
+</head>
+<body>
+
+<p>
+<div class="thud">THUD</div>
+</p>
+
+<p>
+I remember long ago when the <span class="thud">THUD</span> first came to the warren.
+We were all startled because nothing like that had ever happened.  But we soon forgot 
+about it.  For a few growing cycles, then <span class="thud">THUD</span>. That was a day
+Then almost once a growing cycle.  Then it could happen any time.
+</p>
+
+</body>
+</html>
