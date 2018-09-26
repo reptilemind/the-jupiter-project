@@ -29,7 +29,43 @@ tw-passage {
     margin: 0 auto 0 auto;
 }
 
-/* cx image styles */
+
+
+
+
+/*
+	THUD STYLES
+*/
+@keyframes impact-thud {
+    0% { transform: scale(1,1) translate(0, 0);}
+   75% { transform: scale(1,1) translate(0, 0); }
+   78% { transform: scale(1.5,1.5) translate(-0.1em, 0);}
+   81% { transform: scale(0.8,0.8) translate(0, 0);}
+   84% { transform: scale(1.4,1.4) translate(0.2em, 0);}
+   87% { transform: scale(0.9,0.9) translate(0, 0);}
+   90% { transform: scale(1.3,1.3) translate(0.1em, 0);}
+   95% { transform: scale(1,1) translate(0, 0);}
+  100% { transform: scale(1,1) translate(0, 0); }
+}
+
+tw-story .thud {
+  font-size: 8em;
+  color: #9C3108;
+  font-family: 'Flavors', cursive;
+  display: inline-block;
+  animation: impact-thud 2.5s infinite;
+  text-shadow: .05em .05em black;
+}
+tw-story span.thud {
+  margin: 0;
+  font-size: 1.1em;
+  text-shadow: 0;
+}
+
+
+
+
+/* IMAGE STYLES */
 .dig{
   	font-size:3em;
     line-height: 1;
@@ -40,23 +76,8 @@ tw-passage {
 	font-size:1.3em;
   	font-style: bold;
 }
-.chris-note{
-	color:yellow;
-	font-style: italic;
-}
-/*
-.img-gen{ 
-  	display:block; max-width:600px;margin-right:auto;margin-left:auto;
-}
-.img-full{ 
-  	display:block; max-width:900px;margin-right:auto;margin-left:auto;
-}
-.img-med{ 
-  	display:block; max-width:700px;margin-right:auto;margin-left:auto;
-}
-*/
-.limit { max-width:55em;}
-.img-gen, .img-full, .img-med { 
+
+.img-gen, .img-full, .img-med, .limit  { 
 	display:block; margin-right:auto;margin-left:auto; 
 	max-width: 35em;
     max-height: 25em;
@@ -65,8 +86,6 @@ tw-passage {
 .dig-contain{
  	position: relative;
     text-align: center;
-  	
-    
 }
 .bkg-tunnel-1, .bkg-tunnel-2, .bkg-tunnel-3, .bkg-tunnel-4{
 	position: absolute;
@@ -89,27 +108,6 @@ tw-passage {
     transform: translate(-50%, -50%);
   	padding: 10px 10px 10px 10px
 }
-/*
-.bkg-tunnel-1{
-	background: url(https://jupiter.tinyplace.org/images/idil-dig-1.png);
-}
-.bkg-tunnel-2{
-	background: url(https://jupiter.tinyplace.org/images/idil-dig-2.png);
-}
-.bkg-tunnel-3{
-	background: url(https://jupiter.tinyplace.org/images/idil-dig-3.png);
-}
-.bkg-tunnel-4{
-	background: url(https://jupiter.tinyplace.org/images/idil-dig-4.png);
-}
-.bkg-tunnel-5{
-	background: url(https://jupiter.tinyplace.org/images/idil-dig-5.png);
-}
-.bkg-tunnel-6{
-	background: url(https://jupiter.tinyplace.org/images/idil-dig-6.png);
-}
-*/
-/* cx image styles end */
 
 
 /**
@@ -151,32 +149,6 @@ tw-story .urspeak {
 	font-family: 'Kirang Haerang', cursive;
 }
 
-@keyframes impact-thud {
-    0% { transform: scale(1,1) translate(0, 0);}
-   75% { transform: scale(1,1) translate(0, 0); }
-   78% { transform: scale(1.5,1.5) translate(-0.1em, 0);}
-   81% { transform: scale(0.8,0.8) translate(0, 0);}
-   84% { transform: scale(1.4,1.4) translate(0.2em, 0);}
-   87% { transform: scale(0.9,0.9) translate(0, 0);}
-   90% { transform: scale(1.3,1.3) translate(0.1em, 0);}
-   95% { transform: scale(1,1) translate(0, 0);}
-  100% { transform: scale(1,1) translate(0, 0); }
-}
-
-tw-story .thud {
-  font-size: 8em;
-  color: #9C3108;
-  font-family: 'Flavors', cursive;
-  display: inline-block;
-  animation: impact-thud 2.5s infinite;
-}
-
-tw-story span.thud {
-  margin: 0;
-  font-size: 1.1em;
-}
-
-
 
 
 /* HALLS OF THE ÜRS MAP */
@@ -189,11 +161,8 @@ section.ursmap table td {
 			vertical-align: middle; text-align: center;
 			font-size: 4em;  
 }
-section.ursmap table td.majestic div { font-size: 2em; position: relative;  top: -.1em;}
-section.ursmap table td.majestic div.arrow { font-size: 2em; position: relative;  top: 0;}
-
-
-
+section.ursmap table td.majestic div { font-size: 2em; }
+section.ursmap table td.majestic div.arrow { font-size: 2em; }
 
 
 
@@ -206,15 +175,63 @@ section.ursmap table td.majestic div.arrow { font-size: 2em; position: relative;
 
 .enchantment-link:visited, tw-link.visited {color: #ffffff !important;}
 
-tw-sidebar {}
+tw-sidebar { display: none; }
 tw-icon {}
 tw-icon.undo {}
 tw-icon.redo {}
 
+/*
+*
+* MOBILE
+*
+* ONLY
+*
+* RULEZ
+*
+*/
+@media only screen and (max-device-width: 480px) {
 
+  tw-story {
+	  background-color: #001021; 
+	  font-size: 3.2em;
+	  font-family: 'Titillium Web', sans-serif;
+	  color: #ADC3D8;
+	  width: 100%;
+	  max-width: 95%;
+	  margin: 0 auto 0 auto;
+	  padding: 20% 5%;
+  }
 
+  tw-passage {
+	  width: 100%;
+  }  
+  
+  div.thud {
+	line-height: 180%;
+  }
+  
+  .thud {
+	display: inline;	
+}
+  
+  .img-gen, .img-full, .img-med, .limit, .img-dig { 
+	display:block; margin-right:auto;margin-left:auto; 
+	width: 100%;
+	max-height: 90%;
+}
 
+/* HALLS OF THE ÜRS MAP */
 
+section.ursmap table { width: 100%; }
+section.ursmap table tr { height: 1em; } 
+section.ursmap table td {
+			width: 18%; 
+  			padding: 0 .35em; margin: 1em;
+			vertical-align: middle; text-align: center;
+			font-size: 1.7em;  
+}
+section.ursmap table td.majestic div {  }
+section.ursmap table td.majestic div.arrow { font-size: 1.1em; }
 
 
 
@@ -317,22 +334,23 @@ window.onbeforeunload = function() {
 
 
 
-</script><tw-passagedata pid="1" name="Upper Warren" tags="" position="1557,360" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/w-3-tunnels-b.png&quot; class=&quot;limit&quot;&gt;
+
+
+</script><tw-passagedata pid="1" name="Upper Warren" tags="" position="1537,415" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/w-3-tunnels-b.png&quot; class=&quot;limit&quot;&gt;
 
 This is one of the oldest places of the rabbits.  We used to store some things here but now most rabbits have heard the stories of flefnards or tenneses that would leap upon you and eat you in one bite.  These beasts were there to protect the ancient places of the Ürs.  No one really knows anything about them.  No rabbit has been here in a very long time.
 
 I can [[follow the tunnel to a cool dark place, with a smell unlike any I have smelled-&gt;Ledge]], or I can [[follow the tunnel to a bright light, where the air hums and swells-&gt;Entrance to the Halls of the Ürs]] or clamber back down and around to [[The River]]
 
-Climb down [[The Climb]]</tw-passagedata><tw-passagedata pid="2" name="Opened Hatch Peek" tags="" position="2776,363" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/surface-cave.png&quot; style=&quot;max-width:55em&quot;&gt;
+Climb back to [[The River]]</tw-passagedata><tw-passagedata pid="2" name="Opened Hatch Peek" tags="" position="2776,363" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/surface-cave.png&quot; style=&quot;max-width:55em&quot;&gt;
 
 With the hatch swung open, I take a few steps beyond it.  
 
-[[Should I leave the safety of the warren behind and step out into this huge place?-&gt;Leave The Hatch]] or should I [[head back to the great halls of the Ürs-&gt;Right Hall]] to see if there&#39;s something I can do there.</tw-passagedata><tw-passagedata pid="3" name="City of the Ürs" tags="" position="2676,1291" size="200,200">&lt;img src=&quot;https://jupiter.tinyplace.org/images/ur-city-awake-jupiter.png&quot;&gt;
+[[Should I leave the safety of the warren behind and step out into this huge place?-&gt;Leave The Hatch]] or should I [[head back to the great halls of the Ürs-&gt;Right Hall]] to see if there&#39;s something I can do there.</tw-passagedata><tw-passagedata pid="3" name="City of the Ürs" tags="" position="2676,1291" size="100,200">&lt;img src=&quot;https://jupiter.tinyplace.org/images/ur-city-awake-jupiter.png&quot;&gt;
 
-The city of the Ürs is under a dome.  Underneath it are an organic confederation of spacious, rectangular buildings.  Each of them contains one Ür, on a throne in one large room.
+It looks as if I have finally reached it, an even older place.  It is some kind of City of Ürs.  From behind the cliff I climbed, I can see that the bubble surrounding it is the same as the bubble that surrounds this whole huge place.
 
-[[Through the Ears of the Ürs-&gt;Ears of The Urs]]
-[[return to the hatch lwading back to the warren -&gt;Opened Hatch Peek]].</tw-passagedata><tw-passagedata pid="4" name="Sioban&#39;s Palace" tags="" position="3084,1833" size="200,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/ur-rabbit-3.png&quot; class=&quot;img-gen&quot;&gt;
+There is a giant gate made of ears that looks familiar, and it is honestly pretty scary.  I can&#39;t think of any other way to help the rabbits, though, so I [[go through the Ears of the Ürs-&gt;Ears of The Ürs]], or maybe something can still be done [[back in the halls-&gt;Opened Hatch Peek]].</tw-passagedata><tw-passagedata pid="4" name="Sioban&#39;s Palace" tags="" position="2700.6666666666665,1955.6666666666667" size="200,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/ur-rabbit-3.png&quot; class=&quot;img-gen&quot;&gt;
 
 The first Ür palace is that of Sioban.  He gives you some cryptic advice. 
 
@@ -342,7 +360,7 @@ Our moving time is done.  We are all in our sitting time.  Our breeding time nev
 
 We do not build.  We do not control.  We ARE.  And noe.  That is finally what will be.  We care nothing for this shell.&lt;/div&gt;
 
-You can go [[back to the City of the Ürs-&gt;Entrance to City of the Ürs]]</tw-passagedata><tw-passagedata pid="5" name="Tristan&#39;s Palace" tags="" position="2901,1999" size="200,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/ur-rabbit-1.png&quot; class=&quot;img-gen&quot;&gt;
+[[Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="5" name="Tristan&#39;s Palace" tags="" position="2919,1964" size="200,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/ur-rabbit-1.png&quot; class=&quot;img-gen&quot;&gt;
 The second Ür palace is that of Tristan.
 
 &lt;div class=&quot;urspeak&quot;&gt;We were once quite beautiful and accomplished.  We created this place, and your people back in the day.
@@ -351,14 +369,14 @@ Our shell... is failing.  With each &lt;span class=&quot;thud&quot;&gt;THUD&lt;/
 
 &lt;ul&gt;&lt;li&gt;So then, thicken it, old one.&lt;/li&gt;&lt;li&gt;What would that help?&lt;/li&gt;&lt;/ul&gt;
 
-You can go [[back to the City of the Ürs-&gt;Entrance to City of the Ürs]]</tw-passagedata><tw-passagedata pid="6" name="Ebony&#39;s Palace" tags="" position="2612,2057" size="200,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/ur-1.png&quot; style=&quot;max-width:40em;&quot;&gt;
+[[Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="6" name="Ebony&#39;s Palace" tags="" position="3147,1965" size="200,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/ur-1.png&quot; style=&quot;max-width:40em;&quot;&gt;
 The third Ür palace is that of Ebony.
 
 &lt;div class=&quot;urspeak&quot;&gt;I still remember everything about how to work the machines.  Well, some things.  Well, I barely remember.
 
 All my energy is trapped in the backhouse.  It will never help or hurt again.  I am Ebony.  This is the end of time.  Nothing that exists will exist long.  Nothing that exists will exist... to me.&lt;/div&gt;
 
-You can go [[back to the City of the Ürs-&gt;Entrance to City of the Ürs]]</tw-passagedata><tw-passagedata pid="7" name="Tunnel Hub" tags="" position="329,710" size="200,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/waren-4hub.png&quot; class=&quot;limit&quot;&gt;
+[[Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="7" name="Tunnel Hub" tags="" position="329,710" size="200,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/waren-4hub.png&quot; class=&quot;limit&quot;&gt;
 
 This is the heart of the warren.  Each one is wider than it is tall, and was dug by my brethren rabbits and even some were dug by yours truly.
 
@@ -381,7 +399,7 @@ The farm stretches out in all directions, rows and rows of tettleplant and liche
 
 Fellow rabbits are working the rows.  Not much needs to be done as tettleplant grows abundantly here and one mature plant can feed a family of rabbits for a few days.
 
-Seeing the rabbits planting and digging makes me want to...... [[DIG!!!!-&gt;Dig]], or, you know I could totally go back to the [[Tunnel Hub]].</tw-passagedata><tw-passagedata pid="10" name="The River" tags="" position="853,860" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/river-sit.png&quot; class=&quot;limit&quot;&gt;
+$dug_to_monolith[I can head down the tunnel to see [[The Huge Monolith]] again,](else:)[Seeing the rabbits planting and digging makes me want to...... [[DIG!!!!-&gt;Dig]],] or, you know I could totally go back to the [[Tunnel Hub]].</tw-passagedata><tw-passagedata pid="10" name="The River" tags="" position="843,1056.6666666666667" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/river-sit.png&quot; class=&quot;limit&quot;&gt;
 
 I do not where the river flows to or from.  It comes from a tunnel and goes to one.  It is life, and it is all our water.
 
@@ -395,7 +413,7 @@ Return to the [[Tunnel Hub]]</tw-passagedata><tw-passagedata pid="11" name="The 
 
 The weight of the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt; was felt here too.  Now they make little tettleweed shelters for the young kits, and this time it worked.  I see no hurt kittens, just scared ones.  If I don&#39;t do anything will these kits ever know what it&#39;s like to dig and scuffle?
 
-I could sniffle back out to [[Tunnel Hub]] to try and find some solution, or I could just [[DIG!!!!-&gt;Dig]]</tw-passagedata><tw-passagedata pid="12" name="The Warrenherd" tags="" position="983,331" size="200,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/w-mayor.png&quot; class=&quot;img-med&quot;&gt;
+$dug_to_monolith[I can head down the tunnel to see [[The Huge Monolith]] again,](else:)[Seeing the young kits in danger makes me want to...... [[DIG!!!!-&gt;Dig]],] or, you know I could totally go back to the [[Tunnel Hub]] to see if I can find some solution.</tw-passagedata><tw-passagedata pid="12" name="The Warrenherd" tags="" position="983,331" size="200,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/w-mayor.png&quot; class=&quot;img-med&quot;&gt;
 
 The Warrenherd is plenty busy considering things like the future of the Warren already so I am hesitant to disturb him.  When I come in he seems, for a moment, to be resting.
 
@@ -408,38 +426,76 @@ My perfect, young boy.  The &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt;
 
 [[&lt;span class=&quot;herospeak&quot;&gt;Thank you sir, for putting my mind at ease.  You&#39;re right, these explosions will die down soon.  I&#39;ll get back to work.&lt;/span&gt;-&gt;The End From Giving Up]]
 
-[[&lt;span class=&quot;herospeak&quot;&gt;With all respect sire,&lt;/span&gt; you say, &lt;span class=&quot;herospeak&quot;&gt;it&#39;s only gotten worse and worse.  I think you might not be experiencing the same thing I am.&lt;span&gt;-&gt;The The Warrenherd&#39;s Distraction]]</tw-passagedata><tw-passagedata pid="13" name="The End From Giving Up" tags="" position="808,167" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/w-nursery-thud.png&quot; class=&quot;img-med&quot;&gt;
-@TODO for Chris: Put some kind of fiery destruction
+[[&lt;span class=&quot;herospeak&quot;&gt;With all respect sire,&lt;/span&gt; you say, &lt;span class=&quot;herospeak&quot;&gt;it&#39;s only gotten worse and worse.  I think you might not be experiencing the same thing I am.&lt;span&gt;-&gt;The Warrenherd&#39;s Distraction]]</tw-passagedata><tw-passagedata pid="13" name="The End From Giving Up" tags="" position="808,167" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/w-nursery-thud.png&quot; class=&quot;img-med&quot;&gt;
 
 In 6 rabbit crop cycles, a mighty &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt; comes, and the next one tears right through the warren.  The rabbits are all cold and dead.
 
 :(
 
-[[Rewind back to The Beginning-&gt;The Thud]]</tw-passagedata><tw-passagedata pid="14" name="The The Warrenherd&#39;s Distraction" tags="" position="790,562" size="200,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/w-mayor-end.png&quot; class=&quot;img-gen&quot;&gt;
+[[Rewind back to The Beginning-&gt;The Thud]]</tw-passagedata><tw-passagedata pid="14" name="The Warrenherd&#39;s Distraction" tags="" position="788,562" size="200,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/w-mayor-end.png&quot; class=&quot;img-gen&quot;&gt;
 
-&lt;span class=&quot;Warrenherdspeak&quot;&gt;It&#39;ll all work out.&lt;/span&gt;
+&lt;span class=&quot;Warrenherdspeak&quot;&gt;Son, please let me consider other important matters.  It&#39;ll all work out.&lt;/span&gt;
 
-The Warrenherd&#39;s is so certain of his opinion that he&#39;s not able to hear you, but with renewed determination you head back to [[Tunnel Hub]]</tw-passagedata><tw-passagedata pid="15" name="Hatch Chamber" tags="" position="2554,354" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-hatch.png&quot; class=&quot;limit&quot;&gt;
+The Warrenherd&#39;s is so certain of his opinion that he&#39;s not able to hear you, but with renewed determination you head back to [[Tunnel Hub]]</tw-passagedata><tw-passagedata pid="15" name="Hatch Chamber" tags="" position="2432,360" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-hatch.png&quot; class=&quot;limit&quot;&gt;
 
 You either leap onto the hatch handle and [[open it-&gt;Opened Hatch Peek]] or explore the halls:
 
-&lt;section class=&quot;ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;⭖&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[⮈-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▰&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="16" name="The Thud" tags="" position="259,166" size="100,100">
+&lt;section class=&quot;ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[←-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
+</tw-passagedata><tw-passagedata pid="16" name="The Thud" tags="" position="259,189" size="100,100">
 
 Another &lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;   
 
-[[this time ...-&gt;The Worst One]] ⟻(click to find out)</tw-passagedata><tw-passagedata pid="17" name="The Worst One" tags="" position="437,211" size="100,100">
-... maybe the worst &lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt; yet.
+[[this time ...-&gt;The Worst One]]  ⟻(click to find out)
 
-[[I Remember...-&gt;I Remember]]</tw-passagedata><tw-passagedata pid="18" name="I Remember" tags="" position="590,232" size="100,100">
+&lt;!-- These are variables that set the opening state of the game. --&gt;
+(set: $shield_refreshed to false)&lt;!-- have they refreshed the shield? --&gt;
+(set: $dug_to_monolith to false)&lt;!-- did they dug a tunnel to the monolith --&gt;
+&lt;!-- random chance of THUD --&gt;(set: $thud_in_halls to (a: &quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;Another &lt;div class=\&quot;thud\&quot;&gt;THUD&lt;/div&gt; shakes the halls.  
+
+Some clouds of dust swirl around, but these well-built halls remain intact.
+&quot;))
+&lt;!-- random chance of THENGG --&gt;(set: $thengg_in_halls to (a: &quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;A gentle &lt;div class=\&quot;thengg\&quot;&gt;THENGG&lt;/div&gt; vibrates the halls.  
+
+Some clouds of dust swirl around, but these well-built halls remain intact.
+&quot;))
+(set: $chance_of_thud_in_halls to $thud_in_halls)</tw-passagedata><tw-passagedata pid="17" name="The Worst One" tags="" position="437,211" size="100,100">
+... maybe the worst &lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt; yet,
+
+[[I remember...-&gt;I Remember]]</tw-passagedata><tw-passagedata pid="18" name="I Remember" tags="" position="590,232" size="100,100">
 &lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
 
 I remember long ago when the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt; first came to the warren.
+
 We were all startled because nothing like that had ever happened.  
+
 We soon forgot about it for a few growing cycles, then, &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt;. 
 
 That was only one day.
 Then, once a growing cycle. 
 Then, the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt; could happen any time.
+
+
+▼ SCROLL DOWN ▼
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 [[I wake up in a familiar place.-&gt;Ruined Sleeping Quarters]]</tw-passagedata><tw-passagedata pid="19" name="Dig" tags="" position="240,1290" size="100,100">&lt;div class=&quot;dig-contain&quot;&gt;&lt;img src=&quot;https://jupiter.tinyplace.org/images/idil-dig-1.png&quot; class=&quot;img-dig&quot;&gt;
 &lt;div class=&quot;bkg-tunnel-1&quot;&gt;
@@ -453,7 +509,7 @@ It is a rabbit&#39;s reason.
 I am having so much fun, maybe I should
 &lt;div class=&quot;dig&quot;&gt;[[Dig Deeper]]&lt;/div&gt;
 &lt;/div&gt;
-&lt;div&gt;</tw-passagedata><tw-passagedata pid="20" name="River Rabbit" tags="" position="899,1020" size="100,100">To the warren rabbits, The river rabbits are the fool rabbits ... the rabbits no rational rabbit respects. There is nothiing to dig in the river and what is a rabbit if a rabbit doesnt dig?
+&lt;div&gt;</tw-passagedata><tw-passagedata pid="20" name="River Rabbit" tags="" position="1035.6666666666665,1233.3333333333333" size="100,100">To the warren rabbits, The river rabbits are the fool rabbits ... the rabbits no rational rabbit respects. There is nothiing to dig in the river and what is a rabbit if a rabbit doesnt dig?
 
 &lt;img src=&quot;https://jupiter.tinyplace.org/images/w-river-rabbit.png&quot; class=&quot;img-med&quot;&gt;
 
@@ -512,7 +568,7 @@ It is a small object that has many sides.  Right away it seems clear to me that 
 
 I am not sure if I should [[dig around it and try to uncover it.-&gt;The Huge Monolith]] or leave this large stone alone, [[stop digging and rest...-&gt;Sleeping Quarters]]
 &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="Ledge" tags="" position="1564,98" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/surace-landscape-ledge.png&quot; class=&quot;img-gen&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="Ledge" tags="" position="1605.6666666666667,229.66666666666669" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/surace-landscape-ledge.png&quot; class=&quot;img-gen&quot;&gt;
 
 I walk out on a red rock ledge.
 
@@ -527,72 +583,117 @@ The sleeping quarters were hit hard this time.  I&#39;ve never seen such destruc
 Some of the rabbits are wounded, others shocked by near misses.  Debris is all around.  
 
 How much worse can this get?  Something needs to be done.  I should [[speak to the Warrenherd.-&gt;The Warrenherd]] and see if he has a plan to stop this destruction, or I can [[Check the nursery to see if any of the young kits have been hurt this time-&gt;The Nursery]] by the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt;.
-</tw-passagedata><tw-passagedata pid="27" name="River Leap" tags="" position="1042,769" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/river-jump.png&quot; class=&quot;limit&quot;&gt;
+</tw-passagedata><tw-passagedata pid="27" name="River Leap" tags="" position="1086.6666666666667,999" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/river-jump.png&quot; class=&quot;limit&quot;&gt;
 
-I sail through the air yadda yadda
-I [[land --&gt;The Climb]]
-</tw-passagedata><tw-passagedata pid="28" name="The Huge Monolith" tags="" position="953,2043" size="100,100">&lt;div class=&quot;dig-contain&quot;&gt;&lt;img src=&quot;https://jupiter.tinyplace.org/images/idil-dig-6.png&quot; class=&quot;img-dig&quot;&gt;
+I am free of all constraints, until I land.
+
+OUCH! 
+
+I land on my tail! 
+
+Well that hurt. 
+
+I&#39;ve never leapt that far before. 
+
+No wonder no rabbit comes this way any more. 
+
+Now that I&#39;m here, I see a column of tettleplant roots that I could not see from the other side, maybe I can [[climb them to what look like some tunnels above-&gt;Upper Warren]] or [[take a deep breath and jump back across to the warren-&gt;The River]]</tw-passagedata><tw-passagedata pid="28" name="The Huge Monolith" tags="" position="953,2043" size="100,100">&lt;div class=&quot;dig-contain&quot;&gt;&lt;img src=&quot;https://jupiter.tinyplace.org/images/idil-dig-6.png&quot; class=&quot;img-dig&quot;&gt;
 &lt;div class=&quot;bkg-tunnel-6&quot;&gt;
+
+(set: $dug_to_monolith to true)
 
 The more I dig, the more of this giant thing of stone I uncover.  It is some kind of rabbit.  I have heard tails of long and large old rabbits but most rabbits don&#39;t care about old stories of Ürs.  We have what we need, and why would rabbits think about such things.  They&#39;re old stories and old ways, that don&#39;t touch us.  I touch the huge thing, and ...
 &lt;div class=&quot;stop-digging&quot;&gt;[[I am very tired, so I stop digging, and when I wake up I am...-&gt;Sleeping Quarters]]&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="Entrance to the Halls of the Ürs" tags="" position="1772,355" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-door-1.png&quot; style=&quot;max-width:35em;&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="Entrance to the Halls of the Ürs" tags="" position="1768,355" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-door-1.png&quot; class=&quot;limit&quot;&gt;
 
 The natural tunneling of rabbits gives way to wide, tall, smooth walls of white stone.  Some remnants of what rabbits used to store here are scattered about carelessly, like rabbits left in the midst of gathering them up.
 
 Ahead of you is a giant door you can see opens up into a bright, large space.  You can head back to the [[Upper Warren]] or navigate this huge new hall made out of halls.  The halls are shaped like this: 
 
-&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▰&lt;/td&gt;&lt;td&gt;[[⮊-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;⭖&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
+&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;[[→-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
 </tw-passagedata><tw-passagedata pid="30" name="Left Hall" tags="" position="1897,351" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-W.png&quot; class=&quot;limit&quot;&gt;
+(either: ...$chance_of_thud_in_halls)
 I am in the first of what looks like many giant rooms, made entirely of white stone.  There is no roundness to this place.  What tool or rabbit could have made these corners so square?
 
 In some other rooms there are odd sculptures and strange objects.  A little further it looks like a room even larger than the other rooms here.
 
-&lt;section class=&quot;ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;[[⮉-&gt;Top Left Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;td&gt;[[⮈-&gt;Entrance to the Halls of the Ürs]]&lt;/td&gt;&lt;td&gt;▰&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[⮊-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;[[⮋-&gt;Bottom Left Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="31" name="Top Left Hall" tags="" position="1899,215" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-NW.png&quot; class=&quot;limit&quot;&gt;
-
+&lt;section class=&quot;ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;[[↑-&gt;Top Left Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;td&gt;[[←-&gt;Entrance to the Halls of the Ürs]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[→-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;[[↓-&gt;Bottom Left Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
+</tw-passagedata><tw-passagedata pid="31" name="Top Left Hall" tags="" position="1899,215" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-NW.png&quot; class=&quot;limit&quot;&gt;
+(either: ...$chance_of_thud_in_halls)
 I am in the corner of a cavernous series of rooms, made entirely of white stone.
 
 There is a platform, a little high for me to jump on.  It looks like it once was able to contain water.  Some sort of font, or bath.
 
 What ever used this place?  Are these Ür-rabbits gone forever?
 
-&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt; &lt;td&gt;▰&lt;/td&gt; &lt;td&gt;[[⮊-&gt;Top Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt; &lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[⮋-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;⭖&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="32" name="Bottom Left Hall" tags="" position="1905,486" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/
+&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt; &lt;td&gt;▣&lt;/td&gt; &lt;td&gt;[[→-&gt;Top Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt; &lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↓-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
+</tw-passagedata><tw-passagedata pid="32" name="Bottom Left Hall" tags="" position="1905,484" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/
 halls-SE.png&quot; class=&quot;limit&quot;&gt;
+(either: ...$chance_of_thud_in_halls)
 These corners are so strange.  Here there are controls, like the paddle of the river man only made to steer something a lot more complicated.  These must be of the Ürs, and it&#39;s possible they could be used to help the warren.
 
 [[I can approach this device-&gt;Bottom Left Hall Device]] or search further:
 
-&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt; &lt;td&gt;▭&lt;/td&gt; &lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt; &lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[⮉-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;⭖&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▰&lt;/td&gt;&lt;td&gt;[[⮊-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="33" name="Majestic Center Hall" tags="" position="2022,355" size="200,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-great.png&quot; class=&quot;limit&quot;&gt;
+&lt;section class=&quot;ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt; &lt;td&gt;▭&lt;/td&gt; &lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt; &lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↑-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;[[→-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
+</tw-passagedata><tw-passagedata pid="33" name="Majestic Center Hall" tags="" position="2016.6666666666667,356" size="200,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-great.png&quot; class=&quot;limit&quot;&gt;
+(either: ...$chance_of_thud_in_halls)
 This gigantic room is clearly the center of this place.  I can only gaze around in wonder, it&#39;s as big as the warren itself.  All this space and nothing is here. 
 
 On each side is a door, and on each door is a picture.  They have something to do with rabbits and probably, also Ürs.
 
-&lt;section class=&quot;ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[⮉-&gt;Top Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[⮈-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div style=&quot;color: white; font-weight: bold;&quot;&gt;⭖&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[⮊-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[⮋-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
-</tw-passagedata><tw-passagedata pid="34" name="Top Hall" tags="" position="2074,216" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-N.png&quot; class=&quot;limit&quot;&gt;
-
+&lt;section class=&quot;ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↑-&gt;Top Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[←-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div style=&quot;color: white; font-weight: bold;&quot;&gt;▣&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[→-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↓-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
+</tw-passagedata><tw-passagedata pid="34" name="Top Hall" tags="" position="2077.333333333333,216" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-N.png&quot; class=&quot;limit&quot;&gt;
+(either: ...$chance_of_thud_in_halls)
 I am in the opening of a cavernous room, made entirely of white stone.  The strangest of the devices is here.  [[I can walk over to the device.-&gt;Top Hall Device]]
 
-&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;[[⮈-&gt;Top Left Hall]]&lt;/td&gt;&lt;td&gt;▰&lt;/td&gt;&lt;td&gt;[[⮊-&gt;Top Right Hall]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[⮋-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="35" name="Top Right Hall" tags="" position="2247,221" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-NE.png&quot; class=&quot;limit&quot;&gt;
-
+&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;[[←-&gt;Top Left Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;[[→-&gt;Top Right Hall]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[↓-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
+</tw-passagedata><tw-passagedata pid="35" name="Top Right Hall" tags="" position="2245,222" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-NE.png&quot; class=&quot;limit&quot;&gt;
+(either: ...$chance_of_thud_in_halls)
 I am in the opening of a cavernous room, made entirely of white stone.
 
-&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[⮈-&gt;Top Hall]]&lt;/td&gt;&lt;td&gt;▰&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;⭖&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[⮋-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="36" name="Bottom Hall" tags="" position="2067,485" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/
+&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[←-&gt;Top Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[↓-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
+</tw-passagedata><tw-passagedata pid="36" name="Bottom Hall" tags="" position="2067,485" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/
 w-object.png&quot; class=&quot;limit&quot;&gt;
+(either: ...$chance_of_thud_in_halls)
+This room has an amazing device in it, and is the most brightly colored of all these huge rooms.
 
-I am in the opening of a cavernous room, made entirely of white stone. 
+&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[↑-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;[[←-&gt;Bottom Left Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;[[→-&gt;Bottom Right Hall]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
+</tw-passagedata><tw-passagedata pid="37" name="Right Hall" tags="" position="2255,358" size="100,100">&lt;!-- These are variables that set the opening state of the game. --&gt;
+(set: $shield_refreshed to false)&lt;!-- have they refreshed the shield? --&gt;
+(set: $dug_to_monolith to false)&lt;!-- did they dug a tunnel to the monolith --&gt;
+&lt;!-- random chance of THUD --&gt;(set: $thud_in_halls to (a: &quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;Another &lt;div class=\&quot;thud\&quot;&gt;THUD&lt;/div&gt; shakes the halls.  
 
-&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[⮉-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;[[⮈-&gt;Bottom Left Hall]]&lt;/td&gt;&lt;td&gt;▰&lt;/td&gt;&lt;td&gt;[[⮊-&gt;Bottom Right Hall]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="37" name="Right Hall" tags="" position="2255,358" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-E.png&quot; class=&quot;limit&quot;&gt;
+Some clouds of dust swirl around, but these well-built halls remain intact.
+&quot;))
+&lt;!-- random chance of THENGG --&gt;(set: $thengg_in_halls to (a: &quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;A gentle &lt;div class=\&quot;thengg\&quot;&gt;THENGG&lt;/div&gt; vibrates the halls.  
 
+Some clouds of dust swirl around, but these well-built halls remain intact.
+&quot;))
+(set: $chance_of_thud_in_halls to $thud_in_halls)
+
+&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-E.png&quot; class=&quot;limit&quot;&gt;
+(either: ...$chance_of_thud_in_halls)
 Behind me is the [[Majestic Center Hall]] Ahead I see the a room with some [[giant circle door-&gt;Hatch Chamber]]
 
-&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[⮉-&gt;Top Right Hall]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[⮈-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▰&lt;/td&gt;&lt;td&gt;[[⮊-&gt;Hatch Chamber]]&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[⮋-&gt;Bottom Right Hall]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="38" name="Bottom Right Hall" tags="" position="2257,486" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/
+&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↑-&gt;Top Right Hall]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[←-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;[[→-&gt;Hatch Chamber]]&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↓-&gt;Bottom Right Hall]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
+
+
+</tw-passagedata><tw-passagedata pid="38" name="Bottom Right Hall" tags="" position="2257,487.6666666666667" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/
 halls-SW.png&quot; class=&quot;limit&quot;&gt;
-
-[[Bottom Right Hall Viewscreen]]
-
+(either: ...$chance_of_thud_in_halls)
 I am in the opening of a cavernous room, made entirely of white stone.
 
-&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;⭖&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[⮉-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[⮈-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▰&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="39" name="Long Landscape" tags="" position="2757,783" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/surface-2.png&quot; class=&quot;limit&quot;&gt;
+There is a strange device here, and in one corner of it, it looks like there&#39;s a window to another world and a prominent paw print. (if: $shield_refreshed)[ The paw print is glowing, and a viewscreen shines brightly.]&lt;shieldactivated|(else:)[ I could touch my tiny paw to the huge paw print.]&lt;activateshield|
+
+[[I move closer to get a look at the window-&gt;Bottom Right Hall Viewscreen]]
+
+(click: ?activateshield)[(replace: ?activateshield ?shieldactivated)(set: $shield_refreshed to true)(set: $chance_of_thud_in_halls to $thengg_in_halls)(show: ?pressing)]
+
+[The paw print shines brightly with light from deep in the machine, and the viewscreen shines brightly.](pressing|
+
+&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[↑-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[←-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
+
+</tw-passagedata><tw-passagedata pid="39" name="Long Landscape" tags="" position="2757,783" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/surface-2.png&quot; class=&quot;limit&quot;&gt;
 
 What a majestic place I have entered.  Every rabbit I know has lived and bred without seeing that this place **is**.  I can&#39;t even imagine and I&#39;m looking at it?
 
@@ -633,34 +734,23 @@ rabbits I have never met.
 
 I tire a bit, and rest.  How could somerabbit have dug out such a giant place?  The bubble in the distance is like, half the shape of the bubbles i have seen floating off of the river in the warren.  It still looks far away but I can probably get to it... what am I saying!? [[I can get to the bubble -&gt;The Bubble]] ... I know I can!
 
-I am tired though ... maybe I should go back to the [[Hatch Chamber]].</tw-passagedata><tw-passagedata pid="43" name="Entrance to City of the Ürs" tags="" position="2978,1581" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/ur-city-stones.png&quot; class=&quot;limit&quot;&gt;
-You can head to [[Sioban&#39;s Palace]], [[Tristan&#39;s Palace]], [[Ebony&#39;s Palace]] or I can [[leave the city of the Urs-&gt;City of the Ürs]]
-</tw-passagedata><tw-passagedata pid="44" name="Ears of The Urs" tags="" position="3224,1360" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/ur-city-ears-enter-2.png&quot; class=&quot;limit&quot;&gt;
+I am tired though ... maybe I should go back to the [[Hatch Chamber]].</tw-passagedata><tw-passagedata pid="43" name="Entrance to City of the Ürs" tags="" position="2931,1481" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/ur-city-stones.png&quot; class=&quot;limit&quot;&gt;
 
-[[I can go back to the safety of the clffs -&gt;City of the Ürs]]
-[[I can walk through the gap and into the bubble-&gt;Entrance to City of the Ürs]] </tw-passagedata><tw-passagedata pid="45" name="The Climb" tags="" position="1355,613" size="100,100">
-OUCH! 
-I land on my tail! 
-Well that hurt. 
-I&#39;ve never leapt that far before. 
-No wonder norabbit comes this way any more. 
+The path is made of stones that have nothing underneath them but air.  It seems to lead to a courtyard near three large buildings. [[If the stones can lift themselves, perhaps they can lift me, so I walk across them-&gt;Ürs Courtyard]] or I can [[return to the safety of the cliffs-&gt;City of the Ürs]].</tw-passagedata><tw-passagedata pid="44" name="Ears of The Ürs" tags="" position="2917,1345" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/ur-city-ears-enter-2.png&quot; class=&quot;limit&quot;&gt;
 
-&lt;img src=&quot;https://jupiter.tinyplace.org/images/w-upper-roots.png&quot; class=&quot;limit&quot;&gt;
-
-Now that I&#39;m here, i see a column of tettle roots that I could not see from the other side, maybe I can climb them to the [[Upper Warren]]
-</tw-passagedata><tw-passagedata pid="46" name="Leave The Hatch" tags="" position="2828,615" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/surface-1.png&quot; class=&quot;limit&quot;&gt;
+What Ür-rabbit would have been so bold to cross these imposing gates.  I can feel my legs shake, which makes me want to [[go back to the safety of the cliffs -&gt;City of the Ürs]], but I have come this far, so maybe [[I walk through the gap and into the path leading into the bubble-&gt;Entrance to City of the Ürs]] </tw-passagedata><tw-passagedata pid="45" name="Leave The Hatch" tags="" position="2828,615" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/surface-1.png&quot; class=&quot;limit&quot;&gt;
 
 I crawl through the giant hatch into a vast place.
 
 What did I think was large before?  This is the biggest place I have ever been.  It has the thinnest clear walls of any place, and even beyond, there is blackness, and speckles.  One giant sphere hangs in the sky, a place with storms.
 
-[[Should I traverse this long landscape-&gt;Long Landscape]] or go back to the [[Hatch Chamber]]</tw-passagedata><tw-passagedata pid="47" name="The Bubble" tags="" position="2379,1501" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/ur-city-dome.png&quot; class=&quot;img-gen&quot;&gt;
+[[Should I traverse this long landscape-&gt;Long Landscape]] or go back to the [[Hatch Chamber]]</tw-passagedata><tw-passagedata pid="46" name="The Bubble" tags="" position="2379,1501" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/ur-city-dome.png&quot; class=&quot;img-gen&quot;&gt;
 
 Finally this shimmering place is before me.  The bubble shines and pulses like a heartbeat.  
 
 It contains many rooms with sharp corners. Through its great rabbit archways
 
-[[I hop down the slope to the bubble-&gt;City of the Ürs]]</tw-passagedata><tw-passagedata pid="48" name="Bottom Right Hall Viewscreen" tags="" position="2305,622" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/
+[[I hop down the slope to the bubble-&gt;City of the Ürs]]</tw-passagedata><tw-passagedata pid="47" name="Bottom Right Hall Viewscreen" tags="" position="2012.6666666666665,908.6666666666667" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/
 surface-meteor-strike.png&quot; class=&quot;limit&quot;&gt;
 
 I look at this strange window and see the largest room you can image.  Just as I get a sense of perspective,
@@ -671,13 +761,18 @@ I look at this strange window and see the largest room you can image.  Just as I
 
 For the first time, I see what causes the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt;.  It is giant rocks hitting the roof of this huge space!  I can see this thin roof crackle and shake each time.  It looks like it was designed to protect against the rocks, but maybe it&#39;s not doing such a good job anymore.
 
-&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;⭖&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[⮉-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[⮈-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▰&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="49" name="Bottom Left Hall Device" tags="" position="1795,636" size="100,100">This is a very strange device.  You are not sure what to do with it.
+&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[↑-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[←-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
+</tw-passagedata><tw-passagedata pid="48" name="Bottom Left Hall Device" tags="" position="1795,636" size="100,100">This is a very strange device.  I am not sure what to do with it.
 
-&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt; &lt;td&gt;▭&lt;/td&gt; &lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt; &lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[⮉-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;⭖&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▰&lt;/td&gt;&lt;td&gt;[[⮊-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="50" name="Top Hall Device" tags="" position="2069,51" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-N.png&quot; class=&quot;limit&quot;&gt;
+&lt;section class=&quot;ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt; &lt;td&gt;▭&lt;/td&gt; &lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt; &lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↑-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;[[→-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
+</tw-passagedata><tw-passagedata pid="49" name="Top Hall Device" tags="" position="2067,45.66666666666667" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-N.png&quot; class=&quot;limit&quot;&gt;
 
 This device has many spheres, including one that is glowing and much smaller.  Most of them look like they could be rotating around a huge one, and the huge one has many beautiful swirls in it.
 
-&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;[[⮈-&gt;Top Left Hall]]&lt;/td&gt;&lt;td&gt;▰&lt;/td&gt;&lt;td&gt;[[⮊-&gt;Top Right Hall]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[⮋-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata></tw-storydata>
+&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;[[←-&gt;Top Left Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;[[→-&gt;Top Right Hall]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[↓-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
+</tw-passagedata><tw-passagedata pid="50" name="Ürs Courtyard" tags="" position="2918,1626" size="100,100">I can&#39;t tell how to get to the other parts of the city from here, but ahead of me are three large buildings.  Light glows from their entrances.
+
+I can enter the door of [[the leftmost building-&gt;Sioban&#39;s Palace]], [[the center building-&gt;Tristan&#39;s Palace]], [[or the rightmost building-&gt;Ebony&#39;s Palace]] or I can [[leave the city of the Urs-&gt;City of the Ürs]]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
