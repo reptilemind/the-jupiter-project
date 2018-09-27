@@ -286,10 +286,12 @@ section.ursmap table td.majestic div.arrow { font-size: 1.1em; }
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">var dirty = false;
 window.onbeforeunload = function() {
     return dirty ? "If you leave this page with the browser buttons, you will lose all of your progress in exploring Ürs and need to start over from the very beginning." : null;
 }
+
 
 
 
@@ -370,7 +372,7 @@ Our moving time is done.  We are all in our sitting time.  Our breeding time nev
 
 We do not build.  We do not control.  We ARE.  And noe.  That is finally what will be.  We care nothing for this shell.&lt;/div&gt;
 
-[[Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="5" name="Tristan&#39;s Palace" tags="" position="3134,1952.3333333333335" size="200,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/ur-rabbit-1.png&quot; class=&quot;img-gen&quot;&gt;
+[[Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="5" name="Tristan&#39;s Palace" tags="" position="3134,1952" size="200,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/ur-rabbit-1.png&quot; class=&quot;img-gen&quot;&gt;
 The second Ür palace is that of Tristan.
 
 &lt;div class=&quot;urspeak&quot;&gt;We were once quite beautiful and accomplished.  We created this place, and your people back in the day.
@@ -379,7 +381,7 @@ Our shell... is failing.  With each &lt;span class=&quot;thud&quot;&gt;THUD&lt;/
 
 &lt;ul&gt;&lt;li&gt;So then, thicken it, old one.&lt;/li&gt;&lt;li&gt;What would that help?&lt;/li&gt;&lt;/ul&gt;
 
-[[Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="6" name="Ebony&#39;s Palace" tags="" position="2918.6666666666665,1953.3333333333333" size="200,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/ur-1.png&quot; style=&quot;max-width:40em;&quot;&gt;
+[[Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="6" name="Ebony&#39;s Palace" tags="" position="2918,1953" size="200,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/ur-1.png&quot; style=&quot;max-width:40em;&quot;&gt;
 The third Ür palace is that of Ebony.
 
 &lt;div class=&quot;urspeak&quot;&gt;I still remember everything about how to work the machines.  Well, some things.  Well, I barely remember.
@@ -462,11 +464,11 @@ Another &lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
 &lt;!-- These are variables that set the opening state of the game. --&gt;
 (set: $shield_refreshed to false)&lt;!-- have they refreshed the shield? --&gt;
 (set: $dug_to_monolith to false)&lt;!-- did they dug a tunnel to the monolith --&gt;
-&lt;!-- random chance of THUD --&gt;(set: $thud_in_halls to (a: &quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;Another &lt;div class=\&quot;thud\&quot;&gt;THUD&lt;/div&gt; shakes the halls.  
+&lt;!-- random chance of THUD --&gt;(set: $thud_in_halls to (a: &quot;&quot;,&quot;&quot;,&quot;Another &lt;div class=\&quot;thud\&quot;&gt;THUD&lt;/div&gt; shakes the halls.  
 
 Some clouds of dust swirl around, but these well-built halls remain intact.
 &quot;))
-&lt;!-- random chance of THENGG --&gt;(set: $thengg_in_halls to (a: &quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;A gentle &lt;div class=\&quot;thengg\&quot;&gt;THENGG&lt;/div&gt; vibrates the halls.  
+&lt;!-- random chance of THENGG --&gt;(set: $thengg_in_halls to (a: &quot;&quot;,&quot;&quot;,&quot;A gentle &lt;div class=\&quot;thengg\&quot;&gt;THENGG&lt;/div&gt; vibrates the halls.  
 
 Some clouds of dust swirl around, but these well-built halls remain intact.
 &quot;))
@@ -624,14 +626,14 @@ Ahead of you is a giant door you can see opens up into a bright, large space.  Y
 
 &lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;[[→-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
 </tw-passagedata><tw-passagedata pid="30" name="Left Hall" tags="" position="1897,351" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-W.png&quot; class=&quot;limit&quot;&gt;
-(either: ...$chance_of_thud_in_halls)
+(if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
 I am in the first of what looks like many giant rooms, made entirely of white stone.  There is no roundness to this place.  What tool or rabbit could have made these corners so square?
 
 In some other rooms there are odd sculptures and strange objects.  A little further it looks like a room even larger than the other rooms here.
 
 &lt;section class=&quot;ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;[[↑-&gt;Top Left Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;td&gt;[[←-&gt;Entrance to the Halls of the Ürs]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[→-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;[[↓-&gt;Bottom Left Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
 </tw-passagedata><tw-passagedata pid="31" name="Top Left Hall" tags="" position="1899,215" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-NW.png&quot; class=&quot;limit&quot;&gt;
-(either: ...$chance_of_thud_in_halls)
+(if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
 I am in the corner of a cavernous series of rooms, made entirely of white stone.
 
 There is a platform, a little high for me to jump on.  It looks like it once was able to contain water.  Some sort of font, or bath.
@@ -641,50 +643,37 @@ What ever used this place?  Are these Ür-rabbits gone forever?
 &lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt; &lt;td&gt;▣&lt;/td&gt; &lt;td&gt;[[→-&gt;Top Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt; &lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↓-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
 </tw-passagedata><tw-passagedata pid="32" name="Bottom Left Hall" tags="" position="1908,482" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/
 halls-SE.png&quot; class=&quot;limit&quot;&gt;
-(either: ...$chance_of_thud_in_halls)
+(if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
 These corners are so strange.  Here there are controls, like the paddle of the river man only made to steer something a lot more complicated.  These must be of the Ürs, and it&#39;s possible they could be used to help the warren.
 
 [[I can approach this device-&gt;Bottom Left Hall Device]] or search further:
 
 &lt;section class=&quot;ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt; &lt;td&gt;▭&lt;/td&gt; &lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt; &lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↑-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;[[→-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
-</tw-passagedata><tw-passagedata pid="33" name="Majestic Center Hall" tags="" position="2016,356" size="200,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-great-hall.png&quot; class=&quot;limit&quot;&gt;
-(either: ...$chance_of_thud_in_halls)
+</tw-passagedata><tw-passagedata pid="33" name="Majestic Center Hall" tags="" position="2016,357.6666666666667" size="200,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-great-hall.png&quot; class=&quot;limit&quot;&gt;
+(if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
 This gigantic room is clearly the center of this place.  I can only gaze around in wonder, it&#39;s as big as the warren itself.  All this space and nothing is here. 
 
 On each side is a door, and on each door is a picture.  They have something to do with rabbits and probably, also Ürs.
 
 &lt;section class=&quot;ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↑-&gt;Top Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[←-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div style=&quot;color: white; font-weight: bold;&quot;&gt;▣&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[→-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↓-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
 </tw-passagedata><tw-passagedata pid="34" name="Top Hall" tags="" position="2077,216" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/top-hall-device-1.png&quot; class=&quot;limit&quot;&gt;
-(either: ...$chance_of_thud_in_halls)
+(if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
 I am in the opening of a cavernous room, made entirely of white stone.  The strangest of the devices is here.  [[I can walk over to the device.-&gt;Top Hall Device]]
 
 &lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;[[←-&gt;Top Left Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;[[→-&gt;Top Right Hall]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[↓-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
 </tw-passagedata><tw-passagedata pid="35" name="Top Right Hall" tags="" position="2245,222" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-NE.png&quot; class=&quot;limit&quot;&gt;
-(either: ...$chance_of_thud_in_halls)
+(if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
 I am in the opening of a cavernous room, made entirely of white stone.
 
 &lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[←-&gt;Top Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[↓-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
 </tw-passagedata><tw-passagedata pid="36" name="Bottom Hall" tags="" position="2067,485" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/
 w-object.png&quot; class=&quot;limit&quot;&gt;
-(either: ...$chance_of_thud_in_halls)
+(if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
 This room has an amazing device in it, and is the most brightly colored of all these huge rooms. In the center, on a raised platform, a large box with symbols on it hums and small amounts of steam curl from it.  It has places clearly meant for a paw to go but the paw prints look double or triple the width of my own.
 
 &lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[↑-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;[[←-&gt;Bottom Left Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;[[→-&gt;Bottom Right Hall]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
-</tw-passagedata><tw-passagedata pid="37" name="Right Hall" tags="" position="2255,358" size="100,100">&lt;!-- These are variables that set the opening state of the game. --&gt;
-(set: $shield_refreshed to false)&lt;!-- have they refreshed the shield? --&gt;
-(set: $dug_to_monolith to false)&lt;!-- did they dug a tunnel to the monolith --&gt;
-&lt;!-- random chance of THUD --&gt;(set: $thud_in_halls to (a: &quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;Another &lt;div class=\&quot;thud\&quot;&gt;THUD&lt;/div&gt; shakes the halls.  
-
-Some clouds of dust swirl around, but these well-built halls remain intact.
-&quot;))
-&lt;!-- random chance of THENGG --&gt;(set: $thengg_in_halls to (a: &quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;A gentle &lt;div class=\&quot;thengg\&quot;&gt;THENGG&lt;/div&gt; vibrates the halls.  
-
-Some clouds of dust swirl around, but these well-built halls remain intact.
-&quot;))
-(set: $chance_of_thud_in_halls to $thud_in_halls)
-
-&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-E.png&quot; class=&quot;limit&quot;&gt;
-(either: ...$chance_of_thud_in_halls)
+</tw-passagedata><tw-passagedata pid="37" name="Right Hall" tags="" position="2255,358" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/halls-E.png&quot; class=&quot;limit&quot;&gt;
+(if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
 Behind me is the [[Majestic Center Hall]] Ahead I see the a room with some [[giant circle door-&gt;Hatch Chamber]]
 
 &lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↑-&gt;Top Right Hall]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[←-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;[[→-&gt;Hatch Chamber]]&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↓-&gt;Bottom Right Hall]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
@@ -692,16 +681,14 @@ Behind me is the [[Majestic Center Hall]] Ahead I see the a room with some [[gia
 
 </tw-passagedata><tw-passagedata pid="38" name="Bottom Right Hall" tags="" position="2258,487" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/
 halls-SW.png&quot; class=&quot;limit&quot;&gt;
-(either: ...$chance_of_thud_in_halls)
-I am in the opening of a cavernous room, made entirely of white stone.
+(if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
+This hall is like the others, except there is a strange device here, and in one corner of it, it looks like there&#39;s a window to another world and a prominent paw print. (if: $shield_refreshed is not 0)[The paw print is glowing, and the window shines brightly.](else:)[[I could touch my tiny paw to the huge paw print.]&lt;activateshield|]
 
-There is a strange device here, and in one corner of it, it looks like there&#39;s a window to another world and a prominent paw print. (if: $shield_refreshed)[ The paw print is glowing, and a viewscreen shines brightly.]&lt;shieldactivated|(else:)[ I could touch my tiny paw to the huge paw print.]&lt;activateshield|
+(click: ?activateshield)[(set: $shield_refreshed to true)(set: $chance_of_thud_in_halls to $thengg_in_halls)(show: ?pressing)(replace: ?activateshield)[The paw print is glowing, and the window shines brightly.]]
+
+[&lt;div class=&quot;pulse-in&quot;&gt;In the distance, I hear a mighty crackling, and the window to another place shines so much it hurts my eyes for a moment.&lt;/div&gt;](pressing|
 
 [[I move closer to get a look at the window-&gt;Bottom Right Hall Viewscreen]]
-
-(click: ?activateshield)[(replace: ?activateshield ?shieldactivated)(set: $shield_refreshed to true)(set: $chance_of_thud_in_halls to $thengg_in_halls)(show: ?pressing)]
-
-[The paw print shines brightly with light from deep in the machine, and the viewscreen shines brightly.](pressing|
 
 &lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[↑-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[←-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
 
@@ -789,7 +776,7 @@ This device has many spheres, including one that is glowing and much smaller.  M
 
 I can&#39;t tell how to get to the other parts of the city from here, but ahead of me are three large buildings.  Light glows from their entrances.
 
-I can enter the door of [[the leftmost building-&gt;Sioban&#39;s Palace]], [[the center building-&gt;Ebony&#39;s Palace]], [[or the rightmost building-&gt;Tristan&#39;s Palace]] or I can [[leave the city of the Urs-&gt;City of the Ürs]]</tw-passagedata><tw-passagedata pid="51" name="City of the Ürs Awakens" tags="" position="2736,1546.0000000000002" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/ur-entry-stones-active.png&quot; class=&quot;limit&quot;&gt;
+I can enter the door of [[the leftmost building-&gt;Sioban&#39;s Palace]], [[the center building-&gt;Ebony&#39;s Palace]], [[or the rightmost building-&gt;Tristan&#39;s Palace]] or I can [[leave the city of the Urs-&gt;City of the Ürs]]</tw-passagedata><tw-passagedata pid="51" name="City of the Ürs Awakens" tags="" position="2736,1546" size="100,100">&lt;img src=&quot;https://jupiter.tinyplace.org/images/ur-entry-stones-active.png&quot; class=&quot;limit&quot;&gt;
 
 As I hop onto the final stone before the opening something wonderful happens.. The symbols that circle the opening come to life and glow in a cool blue light all around me. I tingle all over from my nose to my tail ... these symbols, I know them, I have seen them in the halls of the Ur. I knew then that they must mean words but now I UNDERSTAND the words they are meant to speak! They are not words like the ones that I know, it would take many of my small words to fill them ... to tell another rabbit what they mean would be impossible for me if they did not already understand them...
 
