@@ -478,7 +478,11 @@ section.ursmap table td.majestic div.arrow { font-size: 1.1em; }
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
 
 
 
@@ -498,7 +502,7 @@ This is like an old tunnel hub, with a few tunnels twisting away into the distan
 
 or, clamber back down and around and leap back to [[↩ The River-&gt;The River]]</tw-passagedata><tw-passagedata pid="2" name="Opened Hatch Peek" tags="" position="3402,196" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/surface-cave.png&quot; class=&quot;limit&quot;&gt;
 
-With the hatch swung open, I take a few steps beyond it. 
+With the hatch open, I take a few steps beyond it. 
 
 [[Should I leave the safety of the warren behind and step out into this huge place?-&gt;Leave The Hatch]] 
 
@@ -549,7 +553,9 @@ Fellow rabbits are working the rows.  Not much needs to be done as tettleplant g
 
 (if: $dug_to_monolith is not 0)[I can head down the tunnel to see [[The Huge Monolith]] again,](else:)[Seeing the rabbits planting and digging makes me want to... [[DIG!!!!-&gt;Dig]],] or go back to the [[↩ Tunnel Hub to search the Warren further-&gt;Tunnel Hub]].</tw-passagedata><tw-passagedata pid="10" name="The River" tags="" position="851,1056" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/river-sit.png&quot; class=&quot;limit&quot;&gt;
 
-I do not know where the river flows to or from.  It comes from a tunnel and goes to one.  It is life, and it is all our water.
+I do not know where the river flows to or from.  
+It comes from a tunnel and goes to one.  
+It is life, and it is all our water.
 
 There is an older rabbit, the [[River Rabbit]], who stays here and tends the place.  He used to cross the river sometimes to the upper hub, but now he mostly maintains the banks and mumbles a lot.
 
@@ -690,7 +696,8 @@ Even in all this crisis it feels good to just dig.
 &lt;div class=&quot;bkg-tunnel-1&quot;&gt;
 &lt;div class=&quot;dig&quot;&gt;I DIG!&lt;/div&gt;
 
-A rabbit is not a rabbit without dirt in his paws and a long tunnel behind him.
+A rabbit is not a rabbit without dirt in its paws 
+and a long tunnel behind it.
 
 &lt;div class=&quot;stop-digging&quot;&gt;[[Stop Digging and rest...-&gt;Sleeping Quarters]]&lt;/div&gt;
 
@@ -713,7 +720,7 @@ What rabbit would come to a place I made here?
 
 I have been digging so long and strong that I hardly noticed until I uncovered something.  Something stone.  Something poking up into the tunnel.  
 
-It is a small object that has many sides.  It is very strange, and it reminds me of old stories of the Ür-rabbits, the ancient ones.  Digging all around it I see that it has a stem, and is rooted very deeply into the earth.
+It is a small object that has many sides.  It is very strange, and it reminds me of old stories of the Ür-rabbits, the ancient ones.  Digging all around it I see that it has a stem, and is rooted very deeply into the ground.
 
 I am not sure if I should [[dig around it and try to uncover it.-&gt;The Huge Monolith]] or leave this large stone alone, [[stop digging and rest...-&gt;Sleeping Quarters]]
 &lt;/div&gt;
@@ -739,9 +746,7 @@ I am free of all constraints, until I land.
 OUCH! 
 
 I land on my tail! 
-
 Well that hurt. 
-
 I&#39;ve never leapt that far before. 
 
 No wonder no rabbit comes this way any more. 
@@ -758,7 +763,9 @@ or [[↩ take a deep breath and jump back across to the warren-&gt;The River]]</
 
 The natural tunneling of rabbits gives way to wide, tall, smooth walls of white stone.  Some remnants of what rabbits used to store here are scattered about carelessly, like rabbits left in the midst of gathering them up. [[↩ I can head back towards the Warren-&gt;Upper Hub]]
 
-However, up ahead is a giant door I can see opens up into a bright, large space.  I navigate this huge new hall made out of halls.  The halls are shaped like this: 
+However, up ahead is a giant door I can see opens up into a bright, large space.  
+I can navigate this huge new hall made out of halls.  
+The halls are shaped like this: 
 
 &lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;[[→-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="30" name="Left Hall" tags="" position="2253,2007" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/halls-W.png&quot; class=&quot;limit&quot;&gt;
 (if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
@@ -1080,11 +1087,14 @@ The &lt;span class=&quot;steering-white&quot;&gt;white&lt;/span&gt; circle is ar
 
 or, [[↩ step away from the machine-&gt;Top Hall]]
 {
-(click: ?presslarge)[(if: $shield_refreshed is not 0)[
-	[[Moving THINGGG Death]]
-](else: )[
-	[[Moving THUD Death Orange]]
-]]
+(click: ?presslarge)[
+  (if: $shield_refreshed is not 0)[
+    (goto: &quot;Moving THINGGG Death&quot;)
+  ](else: )[
+    (goto: &quot;Moving THUD Death Orange&quot;)
+  ]
+]
+
 }</tw-passagedata><tw-passagedata pid="71" name="Green Zone Steering Device" tags="" position="2483,1200" size="100,100">(if: $shield_refreshed is not 0)[&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/steering-position-3-green.png&quot; class=&quot;limit&quot;&gt;](else: )[&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/steering-position-3.png&quot; class=&quot;limit&quot;&gt;]
 
 This device has spheres around spheres, and circles around circles.  Do they tell the Warren what direction to go?
