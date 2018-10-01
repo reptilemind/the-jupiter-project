@@ -11,7 +11,7 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Ürs" startnode="16" creator="Twine" creator-version="2.2.1" ifid="2178685F-1CDC-4AF1-A5E6-CC6A0EFE7C1A" zoom="0.25" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+<tw-storydata name="Ürs" startnode="16" creator="Twine" creator-version="2.2.1" ifid="2178685F-1CDC-4AF1-A5E6-CC6A0EFE7C1A" zoom="0.6" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 @import url('https://fonts.googleapis.com/css?family=Kirang+Haerang');
 @import url('https://fonts.googleapis.com/css?family=Flavors');
 @import url('https://fonts.googleapis.com/css?family=Bungee');
@@ -57,12 +57,32 @@ tw-passage {
   to { color: #ADC3D8; text-shadow: 0 0; }
 }
 
-div.pulse-in {
+.pulse-in {
     color: #ADC3D8;
     font-size: 1.1em;
     animation: pulsein 1.2s linear 3;
 }
+span.pulse-in {
+  font-size: inherit;
+}
 
+/* Steering text colors */
+@keyframes pulsered {
+  0% { text-shadow: 0 0 0; }
+  50% { text-shadow: 0 0 1em #ff0000;}
+  100% { text-shadow: 0 0 0; }
+}
+.steering-red-pulse {
+  color: #ff0000; animation: pulsered 1.2s infinite;
+}
+.steering-orange-pulse {
+  color: #ff9d00; animation: pulsered 1.2s infinite;
+}
+.steering-red { color: #ff0000; }
+.steering-orange { color: #ff9d00; }
+.steering-green { color: #00ff00; }
+.steering-white { color: #fff; text-shadow: 0 0 .2em white;}
+.steering-dark { color: #000; text-shadow: 0 0 .2em white; }
 
 /*
 	THUD STYLES
@@ -454,7 +474,11 @@ section.ursmap table td.majestic div.arrow { font-size: 1.1em; }
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
 
 
 
@@ -490,7 +514,7 @@ A dim and glowing passageway leads down to some larger place.
 
 [[I can only descend-&gt;Tristan&#39;s Vestibule]] 
 
-or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="6" name="Ebony&#39;s Passage" tags="" position="4619,1703" size="100,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/Ur-Stairs-1.png&quot;  class=&quot;img-gen&quot;&gt;
+or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="6" name="Ebony&#39;s Passage" tags="" position="4620,1691" size="100,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/Ur-Stairs-1.png&quot;  class=&quot;img-gen&quot;&gt;
 
 A passageway leads ever downward.
 
@@ -521,13 +545,13 @@ Fellow rabbits are working the rows.  Not much needs to be done as tettleplant g
 
 (if: $dug_to_monolith is not 0)[I can head down the tunnel to see [[The Huge Monolith]] again,](else:)[Seeing the rabbits planting and digging makes me want to... [[DIG!!!!-&gt;Dig]],] or go back to the [[↩ Tunnel Hub to search the Warren further-&gt;Tunnel Hub]].</tw-passagedata><tw-passagedata pid="10" name="The River" tags="" position="851,1056" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/river-sit.png&quot; class=&quot;limit&quot;&gt;
 
-I do not where the river flows to or from.  It comes from a tunnel and goes to one.  It is life, and it is all our water.
+I do not know where the river flows to or from.  It comes from a tunnel and goes to one.  It is life, and it is all our water.
 
 There is an older rabbit, the [[River Rabbit]], who stays here and tends the place.  He used to cross the river sometimes to the upper hub, but now he mostly maintains the banks and mumbles a lot.
 
 [[Leap over the river to the other side of the river-&gt;River Leap]]
 
-Return to the [[Tunnel Hub]]</tw-passagedata><tw-passagedata pid="11" name="The Nursery" tags="" position="355,1133" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/nursery-check-the-kits.png&quot; class=&quot;limit&quot;&gt;
+[[↩ Return to the Tunnel Hub-&gt;Tunnel Hub]]</tw-passagedata><tw-passagedata pid="11" name="The Nursery" tags="" position="355,1133" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/nursery-check-the-kits.png&quot; class=&quot;limit&quot;&gt;
 
 The weight of the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt; was felt here too.  Now they make little tettleweed shelters for the young kits, and this time it worked.  I see no hurt kittens, just scared ones.  If I don&#39;t do anything will these kits ever know what it&#39;s like to dig and scuffle?
 
@@ -544,9 +568,9 @@ The rabbits are all cold and dead. :(
 
 [[Would you like to rewind back to the moment before this happened?-&gt;The Warrenherd]]</tw-passagedata><tw-passagedata pid="14" name="The Warrenherd&#39;s Distraction" tags="" position="788,562" size="200,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/w-mayor-end.png&quot; class=&quot;img-gen&quot;&gt;
 
-{&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;warrenherdspeak&quot;&gt;Son, please let me consider other important matters.  It&#39;ll all work out.&lt;/span&gt;&lt;/div&gt;
+{&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;warrenherdspeak&quot;&gt;It&#39;ll all work out.  I must be going.&lt;/span&gt;&lt;/div&gt;
 
-The Warrenherd is so certain of his opinion that he&#39;s not able to hear you, but with renewed determination you head back to [[Tunnel Hub]] to try and come up with a solution.}</tw-passagedata><tw-passagedata pid="15" name="Hatch Chamber" tags="" position="2861,1414" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/halls-hatch-closed-2.png&quot; class=&quot;limit&quot;&gt;
+The Warrenherd is so certain of his opinion that he&#39;s not able to hear me, but with renewed determination I head back to [[Tunnel Hub]] to try and come up with a solution.}</tw-passagedata><tw-passagedata pid="15" name="Hatch Chamber" tags="" position="2865,1902" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/halls-hatch-closed-2.png&quot; class=&quot;limit&quot;&gt;
 
 I have reached the end of these Halls.  There is a great circle here, that looks like a gateway to another place.  It is adorned with symbols of many rabbits and paws, and a lever that looks like it&#39;s made to open the gateway.
 
@@ -634,7 +658,7 @@ I am having so much fun, maybe I should
 &lt;/div&gt;
 &lt;div&gt;</tw-passagedata><tw-passagedata pid="20" name="River Rabbit" tags="" position="1035,1233" size="200,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/river-rabbit-convo-cu.png&quot; class=&quot;limit&quot;&gt;
 
-The River Rabbit regards you a little suspiciously, but seems willing to help me.
+The River Rabbit regards me a little suspiciously, but seems willing to help me.
 
 What should I say?
 
@@ -718,7 +742,7 @@ I&#39;ve never leapt that far before.
 
 No wonder no rabbit comes this way any more. 
 
-Now that I&#39;m here, I see a column of tettleplant roots that I could not see from the other side, maybe I can [[climb them to what look like some tunnels above-&gt;Upper Hub]] 
+Now that I&#39;m here, I see a column of tettleplant roots that I could not see from the other side, maybe I can [[climb up the roots to another twisty set of tunnels-&gt;Upper Hub]].
 
 or [[↩ take a deep breath and jump back across to the warren-&gt;The River]]</tw-passagedata><tw-passagedata pid="28" name="The Huge Monolith" tags="" position="953,2043" size="100,100">&lt;div class=&quot;dig-contain&quot;&gt;&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/idil-dig-6.png&quot; class=&quot;img-dig&quot;&gt;
 &lt;div class=&quot;bkg-tunnel-6&quot;&gt;
@@ -726,20 +750,20 @@ or [[↩ take a deep breath and jump back across to the warren-&gt;The River]]</
 (set: $dug_to_monolith to true)The more I dig, the more of this giant thing of stone I uncover.  It is some kind of rabbit.  I have heard tails of long and large old rabbits but most rabbits don&#39;t care about old stories of Ürs.  We have what we need, and why would rabbits think about such things.  They&#39;re old stories and old ways, that don&#39;t touch us.  I touch the huge thing, and ...
 &lt;div class=&quot;stop-digging&quot;&gt;[[I am very tired, so I stop digging, and when I wake up I am...-&gt;Sleeping Quarters]]&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="Entrance to the Halls of the Ürs" tags="" position="2120,1523" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/halls-door-1.png&quot; class=&quot;limit&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="Entrance to the Halls of the Ürs" tags="" position="2124,2011" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/halls-door-1.png&quot; class=&quot;limit&quot;&gt;
 
-The natural tunneling of rabbits gives way to wide, tall, smooth walls of white stone.  Some remnants of what rabbits used to store here are scattered about carelessly, like rabbits left in the midst of gathering them up.
+The natural tunneling of rabbits gives way to wide, tall, smooth walls of white stone.  Some remnants of what rabbits used to store here are scattered about carelessly, like rabbits left in the midst of gathering them up. [[↩ I can head back towards the Warren-&gt;Upper Hub]]
 
-Ahead of you is a giant door you can see opens up into a bright, large space.  You can head back to the [[Upper Hub]] or navigate this huge new hall made out of halls.  The halls are shaped like this: 
+However, up ahead is a giant door I can see opens up into a bright, large space.  I navigate this huge new hall made out of halls.  The halls are shaped like this: 
 
-&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;[[→-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="30" name="Left Hall" tags="" position="2249,1519" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/halls-W.png&quot; class=&quot;limit&quot;&gt;
+&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;[[→-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="30" name="Left Hall" tags="" position="2253,2007" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/halls-W.png&quot; class=&quot;limit&quot;&gt;
 (if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
 I am in the first of what looks like many giant rooms, made entirely of white stone.  There is no roundness to this place.  What tool or rabbit could have made these corners so square?
 
 In some other rooms there are odd sculptures and strange objects.  A little further it looks like a room even larger than the other rooms here.
 
 &lt;section class=&quot;ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;[[↑-&gt;Top Left Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;td&gt;[[←-&gt;Entrance to the Halls of the Ürs]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[→-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;[[↓-&gt;Bottom Left Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
-</tw-passagedata><tw-passagedata pid="31" name="Top Left Hall" tags="" position="2251,1381" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/halls-NW.png&quot; class=&quot;limit&quot;&gt;{
+</tw-passagedata><tw-passagedata pid="31" name="Top Left Hall" tags="" position="2255,1869" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/halls-NW.png&quot; class=&quot;limit&quot;&gt;{
 (if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
 }I&#39;m in the corner of a cavernous series of rooms, made entirely of white stone.  The strangest, blocky tunnels lead in confusing directions.
 
@@ -747,31 +771,31 @@ There is a platform, I could probably (link: &quot;jump up on&quot;)[(link: &quo
 
 What ever used this place?  Are these Ür-rabbits gone forever?
 
-&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt; &lt;td&gt;▣&lt;/td&gt; &lt;td&gt;[[→-&gt;Top Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt; &lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↓-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="32" name="Bottom Left Hall" tags="" position="2258,1650" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/
+&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt; &lt;td&gt;▣&lt;/td&gt; &lt;td&gt;[[→-&gt;Top Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt; &lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↓-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="32" name="Bottom Left Hall" tags="" position="2262,2138" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/
 halls-se-device-b.png&quot; class=&quot;limit&quot;&gt;
 (if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]There is an odd box here with a dark, cracked window.  It looks like it once worked, but now it looks broken.
 
 [[I can approach this device-&gt;Useless Device]] or search further:
 
 &lt;section class=&quot;ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt; &lt;td&gt;▭&lt;/td&gt; &lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt; &lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↑-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;[[→-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
-</tw-passagedata><tw-passagedata pid="33" name="Majestic Center Hall" tags="" position="2368,1525" size="200,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/halls-great-hall.png&quot; class=&quot;limit&quot;&gt;
+</tw-passagedata><tw-passagedata pid="33" name="Majestic Center Hall" tags="" position="2384,2014" size="200,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/halls-great-hall.png&quot; class=&quot;limit&quot;&gt;
 (if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
 This gigantic room is clearly the center of this place.  I can only gaze around in wonder, it&#39;s as big as the warren itself.  All this space and nothing is here. 
 
 On each side is a door, and on each door is a picture.  They have something to do with rabbits and probably, also Ürs.
 
 &lt;section class=&quot;ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↑-&gt;Top Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[←-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div style=&quot;color: white; font-weight: bold;&quot;&gt;▣&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[→-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↓-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
-</tw-passagedata><tw-passagedata pid="34" name="Top Hall" tags="" position="2429,1384" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/top-hall-device-1.png&quot; class=&quot;limit&quot;&gt;{
+</tw-passagedata><tw-passagedata pid="34" name="Top Hall" tags="" position="2437,1876" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/top-hall-device-1.png&quot; class=&quot;limit&quot;&gt;{
 (if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
-}I am in the opening of a cavernous room, made entirely of white stone.  In one half of the room is a huge and complicated device many times larger than me, with spheres circling other spheres. [[I can walk over to the device.-&gt;Steering Device]]
+}I am in the opening of a cavernous room, made entirely of white stone.  In one half of the room is a huge and complicated device many times larger than me, with spheres circling other spheres. [[I can walk over to the device.-&gt;Red Zone Steering Device]]
 
 &lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;[[←-&gt;Top Left Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;[[→-&gt;Top Right Hall]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[↓-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
-</tw-passagedata><tw-passagedata pid="35" name="Top Right Hall" tags="" position="2597,1390" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/halls-NE.png&quot; class=&quot;limit&quot;&gt;
+</tw-passagedata><tw-passagedata pid="35" name="Top Right Hall" tags="" position="2598,1874" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/halls-NE.png&quot; class=&quot;limit&quot;&gt;
 (if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
 I am in the opening of a cavernous room, made entirely of white stone.
 
 &lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[←-&gt;Top Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[↓-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
-</tw-passagedata><tw-passagedata pid="36" name="Bottom Hall" tags="" position="2419,1653" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/
+</tw-passagedata><tw-passagedata pid="36" name="Bottom Hall" tags="" position="2423,2206" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/
 w-object.png&quot; class=&quot;limit&quot;&gt;
 (if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
 This room has an amazing device in it, and is the most brightly colored of all these huge rooms. In the center, on a raised platform, a large box with symbols on it hums and small amounts of steam curl from it.  It has places clearly meant for a paw to go but the paw prints look double or triple the width of my own.
@@ -779,11 +803,11 @@ This room has an amazing device in it, and is the most brightly colored of all t
 [[In a room towards the Warren-&gt;Bottom Left Hall]] I see a boxy device and (if: $diode_is_cleared is not 0)[[[in a corner room nearby-&gt;Usable Shield Room]]](else:)[[[in a corner room nearby-&gt;Unpowered Shield Room]]] I see a very similar box, but I can hear it from here, whirring softly.
 
 &lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[↑-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;[[←-&gt;Bottom Left Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;(if: $diode_is_cleared is not 0)[[[→-&gt;Usable Shield Room]]](else:)[[[→-&gt;Unpowered Shield Room]]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
-</tw-passagedata><tw-passagedata pid="37" name="Right Hall" tags="" position="2611,1526" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/halls-E.png&quot; class=&quot;limit&quot;&gt;
+</tw-passagedata><tw-passagedata pid="37" name="Right Hall" tags="" position="2615,2014" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/halls-E.png&quot; class=&quot;limit&quot;&gt;
 (if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
 Behind me is the [[Majestic Center Hall]] Ahead I see the a room with some (if: $hatch_opened is not 0)[[[giant circle gateway-&gt;Opened Hatch]]](else: )[[[giant circle gateway-&gt;Hatch Chamber]]] and (if: $diode_is_cleared is not 0)[[[in a corner room nearby-&gt;Usable Shield Room]]](else:)[[[in a corner room nearby-&gt;Unpowered Shield Room]]] I see some kind of device, and I can hear it from here, whirring softly.
 
-&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↑-&gt;Top Right Hall]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[←-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;(if: $hatch_opened is not 0)[[[→-&gt;Opened Hatch]]](else: )[[[→-&gt;Hatch Chamber]]]&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;(if: $diode_is_cleared is not 0)[[[↓-&gt;Usable Shield Room]]](else:)[[[↓-&gt;Unpowered Shield Room]]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="38" name="Usable Shield Room" tags="" position="2628,1865" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/
+&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↑-&gt;Top Right Hall]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[←-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;(if: $hatch_opened is not 0)[[[→-&gt;Opened Hatch]]](else: )[[[→-&gt;Hatch Chamber]]]&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;(if: $diode_is_cleared is not 0)[[[↓-&gt;Usable Shield Room]]](else:)[[[↓-&gt;Unpowered Shield Room]]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="38" name="Usable Shield Room" tags="" position="2632,2353" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/
 halls-sw-2.png&quot; class=&quot;limit&quot;&gt;
 (if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
 This hall is like the others, except there is a strange device here, and in one corner of it, it looks like there&#39;s a window to another world and a prominent paw print. (if: $shield_refreshed is not 0)[The paw print is glowing, and the window shines brightly.](else:)[[I could touch my tiny paw to the huge paw print.]&lt;activateshield|]
@@ -840,7 +864,7 @@ or [[↩ go back to the Halls-&gt;Opened Hatch]]</tw-passagedata><tw-passagedata
 
 Finally this shimmering place is before me.  The bubble shines and pulses like a heartbeat. There are towers and halls inside a cieling skin much like the one over this whole place.
 
-[[I hop down the slope to the bubble-&gt;City of the Ürs]]</tw-passagedata><tw-passagedata pid="47" name="Shield THUD Viewscreen" tags="" position="2364,2076" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/
+[[I hop down the slope to the bubble-&gt;City of the Ürs]]</tw-passagedata><tw-passagedata pid="47" name="Shield THUD Viewscreen" tags="" position="2368,2564" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/
 surface-meteor-strike.png&quot; class=&quot;limit&quot;&gt;
 
 I look at this strange window and see the largest room you can imagine, and a rabbit shaped tower in the distance.  Just as I get a sense of perspective,
@@ -852,7 +876,7 @@ For the first time, I see what causes the &lt;span class=&quot;thud&quot;&gt;THU
 
 or, [[↩ step away from the machine-&gt;Unpowered Shield Room]]
 
-&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[↑-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[←-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="48" name="Useless Device" tags="" position="2147,1804" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/
+&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[↑-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[←-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="48" name="Useless Device" tags="" position="2151,2292" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/
 halls-se-device-2.png&quot; class=&quot;limit&quot;&gt;
 This is a strange box indeed. It doesn&#39;t hum, or make any noise, and its little window is completely dark.
 
@@ -863,37 +887,31 @@ I can [touch my paw to the paw print]&lt;touch|(click: ?touch)[ but...
 ]
 or, [[↩ step away from the machine-&gt;Bottom Left Hall]]
 
-&lt;section class=&quot;ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt; &lt;td&gt;▭&lt;/td&gt; &lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt; &lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↑-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;[[→-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="49" name="Steering Device" tags="" position="2419,1213" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/top-hall-device-2.png&quot; class=&quot;limit&quot;&gt;
+&lt;section class=&quot;ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt; &lt;td&gt;▭&lt;/td&gt; &lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt; &lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↑-&gt;Left Hall]]&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;[[→-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="49" name="Red Zone Steering Device" tags="" position="2228,1409" size="100,100">(if: $shield_refreshed is not 0)[&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/steering-position-1-shield.png&quot; class=&quot;limit&quot;&gt;](else: )[&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/steering-position-1.png&quot; class=&quot;limit&quot;&gt;]
 
-This device has many spheres, including one that is glowing and much smaller.  Most of them look like they could be rotating around a huge one, and the huge one has many beautiful swirls in it.
-(if: $position is 0)[(set: $position to 3)]
-I think this device shows which way the warren is going.  I wonder if I could change it?  
-
-&lt;h1&gt;It&#39;s in position (live: 0.5s)[$position]&lt;/h1&gt;
+This device has spheres around spheres, and circles around circles.  Do they tell the Warren what direction to go?
 
 I see three large paw prints.  Two are side by side.  A larger one is below it.  They are larger than my paw but I could probably put my paw against them.
 
-* [Press the left paw print]&lt;pressleft|
-* [Press the right paw print]&lt;pressright|
-* [Press the large red paw print]&lt;presslarge|
+The &lt;span class=&quot;steering-white&quot;&gt;white&lt;/span&gt; circle is around the &lt;span class=&quot;steering-red&quot;&gt;red&lt;/span&gt; dot.
 
-or, [[↩ step away from the machine-&gt;Top Hall]]
+* The left paw print is &lt;span class=&quot;steering-dark&quot;&gt;dark&lt;/span&gt;, [I press the left paw print]&lt;pressleft|
+* The right paw print is &lt;span class=&quot;steering-orange&quot;&gt;orange&lt;/span&gt; [[I press the right paw print-&gt;Orange Zone Steering Device]]
+* The large paw print is &lt;span class=&quot;steering-dark&quot;&gt;dark&lt;/span&gt;, [I Press the large paw print]&lt;presslarge|
 
-&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;[[←-&gt;Top Left Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;[[→-&gt;Top Right Hall]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[↓-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;{
-(click: ?pressleft)[(set: $position to $position - 1)]
-(click: ?pressright)[(set: $position to $position + 1)]
-(click-replace: ?presslarge)[The button begins to pulse red.  Are you sure you want to press it again?]
-}
-</tw-passagedata><tw-passagedata pid="50" name="Ürs Courtyard" tags="" position="4595,1286" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-courtyard.png&quot; class=&quot;limit&quot;&gt;
+or, [[↩ step away from the machine-&gt;Top Hall]]{
+(click-append: ?pressleft)[&lt;span class=&quot;pulse-in&quot;&gt;, but nothing happens.&lt;/span&gt;]
+(click-append: ?presslarge)[&lt;span class=&quot;pulse-in&quot;&gt;, but nothing happens.&lt;/span&gt;]
+}</tw-passagedata><tw-passagedata pid="50" name="Ürs Courtyard" tags="" position="4601,1289" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-courtyard-2.png&quot; class=&quot;limit&quot;&gt;
 
 There&#39;s a whole city of spires and blocks in the distance, but it looks like I&#39;m on some kind of island.  I can&#39;t tell how to get to the other parts here, but ahead of me are three large buildings.  Light glows from their entrances.
 
-I can enter the door of:
+I can enter:
+* [[The Paw symbol door-&gt;Sioban&#39;s Passage]]
+* [[The Rabbit symbol door-&gt;Ebony&#39;s Passage]]
+* [[The Circles symbol door-&gt;Tristan&#39;s Passage]] 
 
-* [[the leftmost building-&gt;Sioban&#39;s Passage]]
-* [[the center building-&gt;Ebony&#39;s Passage]]
-* [[the rightmost building-&gt;Tristan&#39;s Passage]] or I can 
-* [[leave the city of the Urs-&gt;City of the Ürs]]</tw-passagedata><tw-passagedata pid="51" name="City of the Ürs Awakens" tags="" position="4420,1210" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-entry-stones-active.png&quot; class=&quot;limit&quot;&gt;
+or [[↩ go back to the entrance-&gt;City of the Ürs]]</tw-passagedata><tw-passagedata pid="51" name="City of the Ürs Awakens" tags="" position="4420,1210" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-entry-stones-active.png&quot; class=&quot;limit&quot;&gt;
 
 I hop carefully across these stones, and they indeed hold my weight, as well as their own.  
 
@@ -909,15 +927,15 @@ The third word is the paw of the Ür. It is their mark, their paws touch everyth
 
 I see three of the great Ur words but I do not see the fourth, but I feel complete.
 
-Hop onward to the [[Ürs Courtyard]] or [[return to the safety of the cliffs-&gt;City of the Ürs]].</tw-passagedata><tw-passagedata pid="52" name="Upper Ledge" tags="" position="1951,299" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/w-ruin-l2.png&quot; class=&quot;img-gen&quot;&gt;
+Hop onward to the [[Ürs Courtyard]] or [[return to the safety of the cliffs-&gt;City of the Ürs]].</tw-passagedata><tw-passagedata pid="52" name="Upper Ledge" tags="" position="1951,299" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/metal-tettle.png&quot; class=&quot;img-gen&quot;&gt;
 
-I can&#39;t guess what purpose this place once held.  Like many places here, it has been damaged by the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt;; it is a tower made to look like a giant rabbit.  Its once majestic paw has broken, and &lt;span class=&quot;hidden-link&quot;&gt;[[piles of rubble-&gt;Pushin&#39; Rubble]]&lt;/span&gt; is littered about.  Is this one of the great Ürs, turned to stone?  Were they so huge?
+I can&#39;t guess what purpose this place once held.  Like many places here, it has been damaged by the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt;; it is a tower made to look like a giant rabbit.  Its once majestic paw has broken, and (if: $ebony_advice_about_rubble is not 0)[[[piles of rubble-&gt;Pushin&#39; Rubble]]](else: )[&lt;span class=&quot;hidden-link&quot;&gt;[[piles of rubble-&gt;Pushin&#39; Rubble]]&lt;/span&gt;] are littered about.  Is this one of the great Ürs, turned to stone?  Were they so huge?
 
 [[I can scoot back down the tiny tunnel to the upper hub-&gt;Upper Hub]]</tw-passagedata><tw-passagedata pid="53" name="Sioban&#39;s Vestibule" tags="" position="4044,1939" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-lobby-sioban.png&quot;  class=&quot;img-gen&quot;&gt;
 
 The passageway leads down to the beginning of a huge place.  Giant rabbit statues tower above me.
 
-I [[continue on to see what this place contains-&gt;Sioban&#39;s Palace]]
+[[I continue on to see what this place contains-&gt;Sioban&#39;s Palace]]
 
 or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="54" name="Sioban&#39;s Throne" tags="" position="4025,2425" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-shield-rabbit.png&quot;  class=&quot;ur-throne&quot;&gt;(set: $ur_visited to true)(set: $sioban_visited to true)
 
@@ -938,30 +956,37 @@ Our moving time is done.  We are all in our sitting time.  Our breeding time nev
 
 }&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;I want to thicken the shield then.&lt;/span&gt;&lt;/div&gt;{
 
-}[[↩ Walk all the way back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="55" name="Ebony&#39;s Vestibule" tags="" position="4689,1920" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-lobby-ebony.png&quot;  class=&quot;img-gen&quot;&gt;
+}[[↩ Walk all the way back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="55" name="Ebony&#39;s Vestibule" tags="" position="4584,1956" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-lobby-tristan.png&quot;  class=&quot;img-gen&quot;&gt;
 
 The passageway leads down to the beginning of a huge place.  Giant rabbit statues tower above me.
 
 I [[continue on to see what this place holds-&gt;Ebony&#39;s Palace]] 
 
-or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="56" name="Ebony&#39;s Throne" tags="" position="4737,2421" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/first-of-the-Ur.png&quot;  class=&quot;ur-throne&quot;&gt;(set: $ur_visited to true)(set: $ebony_visited to true)
+or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="56" name="Ebony&#39;s Throne" tags="" position="4574,2460" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/first-of-the-Ur.png&quot;  class=&quot;ur-throne&quot;&gt;(set: $ur_visited to true)(set: $ebony_visited to true)(set: $ebony_advice_about_rubble to true)
 
-&lt;div class=&quot;urspeak&quot;&gt;Young rabbit of the underholes, I am the one who is Ebony&lt;/div&gt;
+&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;urspeak&quot;&gt;Young rabbit of the underholes, I am the one who is Ebony&lt;span&gt;&lt;/div&gt;{
 
-&lt;div class=&quot;urspeak&quot;&gt;I still remember everything about how to work the machines.  Well, some things.  Well, I barely remember.
+}&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;Hello, old one.  I can&#39;t figure out how to turn on the power.&lt;/span&gt;&lt;/div&gt;{
 
-All my energy is trapped in the backhouse.  It will never help or hurt again.  I am Ebony.  This is the end of time.  Nothing that exists will exist long.  Nothing that exists will exist... to me.&lt;/div&gt;
+}&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;urspeak&quot;&gt;What you need to do, young one, is go to the tower of the rabbits and clear off the diode, then go back to the shield machine and turn it on.  Then you will be able to steer.  Here, I can [[take you there with my mind.-&gt;Portal to Ledge]]&lt;span&gt;&lt;/div&gt;{
 
-[[↩ Walk all the way back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="57" name="Tristan&#39;s Vestibule" tags="" position="5348,1919" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-lobby-tristan.png&quot;  class=&quot;img-gen&quot;&gt;
+}&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;urspeak&quot;&gt;I still remember everything about how to work the machines.  Well, some things.  Well, I barely remember.
+
+All my energy is trapped in the backhouse.  It will never help or hurt again.  I am Ebony.  This is the end of time.  Nothing that exists will exist long.  Nothing that exists will exist... to me.&lt;/span&gt;&lt;/div&gt;
+
+[[↩ Walk all the way back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="57" name="Tristan&#39;s Vestibule" tags="" position="5196,1939" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-lobby-ebony.png&quot;  class=&quot;img-gen&quot;&gt;
 
 The passageway leads down to the beginning of a huge place.  Giant rabbit statues tower above me.
 
 I [[continue on to see what this place is-&gt;Tristan&#39;s Palace]]
 
-or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="58" name="Tristan&#39;s Throne" tags="" position="5353,2435" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-tristan.png&quot; class=&quot;ur-throne&quot;&gt;(set: $ur_visited to true)(set: $tristan_visited to true)
+or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="58" name="Tristan&#39;s Throne" tags="" position="5228,2410" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-tristan.png&quot; class=&quot;ur-throne&quot;&gt;(set: $ur_visited to true)(set: $tristan_visited to true)
 
 &lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;urspeak&quot;&gt;Young rabbit of the underholes, I am the one who is Tristan&lt;span&gt;&lt;/div&gt;{
 
+}&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;Hello, old one.  I can&#39;t figure out how to steer&lt;/span&gt;&lt;/div&gt;{
+
+}&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;urspeak&quot;&gt;You have to make sure the shield is on, before you steer, or the asteroids will destroy this place before you make it safely.  Then, make sure the reticle in the steering room is set to GREEN.  [[I can take you there with my mind-&gt;Top Hall]]&lt;span&gt;&lt;/div&gt;{
 
 }&lt;div class=&quot;speech other&quot;&gt;&lt;div class=&quot;urspeak&quot;&gt;We once used to steer (모퓨래), to drive.  We once changed course, when needed.  Now we stay on parabola.  Now we dine on star seed.  Nothing hurts us, only loves us.
 
@@ -977,7 +1002,7 @@ We do not build.  We do not control.  We ARE.  And noe.  That is finally what wi
 
 [[&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;Thank you sir, for putting my mind at ease.  You&#39;re right, these explosions will die down soon.  I&#39;ll get back to work.&lt;/span&gt;&lt;/div&gt;-&gt;The End From Giving Up]]
 or
-[[&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;With all respect sire, it&#39;s only gotten worse and worse.  I think you might not be experiencing the same thing I am.&lt;span&gt;&lt;/div&gt;-&gt;The Warrenherd&#39;s Distraction]]}</tw-passagedata><tw-passagedata pid="61" name="Shield Activated Viewscreen" tags="" position="2486,2078" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/shield-activated-ting.png&quot; class=&quot;limit&quot;&gt;
+[[&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;With all respect sire, it&#39;s only gotten worse and worse.  I think you might not be experiencing the same thing I am.&lt;span&gt;&lt;/div&gt;-&gt;The Warrenherd&#39;s Distraction]]}</tw-passagedata><tw-passagedata pid="61" name="Shield Activated Viewscreen" tags="" position="2490,2566" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/shield-activated-ting.png&quot; class=&quot;limit&quot;&gt;
 
 I look at this strange window and see the largest room you can imagine.  The glowing roof is now fully powered, and when a big rock hits it, it makes a more muted sound.  Kind of a sound like,
 
@@ -987,7 +1012,7 @@ The giant rocks just bounce off.  Perhaps the Warren is safe now, but I can&#39;
 
 [[↩ step away from the machine-&gt;Usable Shield Room]]
 
-&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[↑-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[←-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="62" name="Unpowered Shield Room" tags="" position="2741,1768" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/
+&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[↑-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[←-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="62" name="Unpowered Shield Room" tags="" position="2745,2256" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/
 halls-sw-1.png&quot; class=&quot;limit&quot;&gt;
 (if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
 This hall is like the others, except there is a strange device here, and in one corner of it, it looks like there&#39;s a window to another world and a prominent paw print. [[I could touch my tiny paw to the huge paw print.]&lt;activateshield|]
@@ -1001,7 +1026,7 @@ This hall is like the others, except there is a strange device here, and in one 
 
 It&#39;s obvious the rubble is covering something, I use your powerful rabbit legs to shove the rocks away, and a weird tettleplant made of metal is revealed!  Maybe this will make something else work.(set: $diode_is_cleared to true)
 
-[[Now I can see it clearly.-&gt;Upper Ledge With Diode]]</tw-passagedata><tw-passagedata pid="64" name="Upper Ledge With Diode" tags="" position="2110,279" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/w-ruin-l2-inactive.png&quot; class=&quot;img-gen&quot;&gt;
+[[Now I can see it clearly.-&gt;Upper Ledge With Diode]]</tw-passagedata><tw-passagedata pid="64" name="Upper Ledge With Diode" tags="" position="2111,279" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/w-diode.png&quot; class=&quot;img-gen&quot;&gt;
 
 I can&#39;t guess what purpose this place once held.  Like many places here, it has been damaged by the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt;; it is a tower made to look like a giant rabbit.  Its once majestic paw has broken, but now the diode is uncovered. I think this might make one of the machines work.
 
@@ -1013,31 +1038,147 @@ What did I think was large before?  This is the biggest place I have ever been. 
 
 There are other entrances on this spire, but there is nowhere safe to go from this ledge.
 
-[[The only place to go is through the tunnel back to the Upper Hub-&gt;Upper Hub]]</tw-passagedata><tw-passagedata pid="66" name="Sioban&#39;s Palace" tags="" position="4072,2197" size="100,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-throne-pre-sioban.png&quot;  class=&quot;img-gen&quot;&gt;
+[[The only place to go is through the tunnel back to the Upper Hub-&gt;Upper Hub]]</tw-passagedata><tw-passagedata pid="66" name="Sioban&#39;s Palace" tags="" position="4072,2198" size="100,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-sioban-2.png&quot; class=&quot;img-gen&quot;&gt;
 
 (if: $ur_visited is not 0)[I am in another massive Ür palace.  Giant rabbit statues tower above me, and this place is even bigger than the Halls, even more imposing.  What strange and round creature could be at the end of **this** strange place?](else: )[I am in a massive place with some kind of platform or throne wayyyyyyyy at the other end.  Giant rabbit statues tower above me, and this place is even bigger than the Halls, even more imposing. On it sits an enormous...rabbit, or round, rabbit-like machine.  Could this be an Ür?]
 
-I [[approach the throne-&gt;Sioban&#39;s Throne]] 
+[[I approach the throne-&gt;Sioban&#39;s Throne]] 
 
-or [[↩ Walk back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="67" name="Ebony&#39;s Palace" tags="" position="4795,2166" size="100,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-throne-pre-ebony.png&quot;  class=&quot;img-gen&quot;&gt;
+or [[↩ Walk back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="67" name="Ebony&#39;s Palace" tags="" position="4643,2214" size="100,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-ebony-2.png&quot;  class=&quot;img-gen&quot;&gt;
 
 (if: $ur_visited is not 0)[I am in another massive Ür palace.  Giant rabbit statues tower above me, and this place is even bigger than the Halls, even more imposing.  What strange and crackling creature could be at the end of **this** strange place?](else: )[I am in a massive place with some kind of platform or throne wayyyyyyyy at the other end.  Giant rabbit statues tower above me, and this place is even bigger than the Halls, even more imposing. On it sits an enormous...rabbit, or crackling, rabbit-like machine.  Could this be an Ür?]
 
 [[I approach the throne-&gt;Ebony&#39;s Throne]] 
 
-or [[↩ Walk back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="68" name="Tristan&#39;s Palace" tags="" position="5366,2181" size="100,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-throne-pre-tristan.png&quot;  class=&quot;img-gen&quot;&gt;
+or [[↩ Walk back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="68" name="Tristan&#39;s Palace" tags="" position="5264,2180" size="100,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-tristan-2.png&quot;  class=&quot;img-gen&quot;&gt;
 
 (if: $ur_visited is not 0)[I am in another massive Ür palace.  Giant rabbit statues tower above me, and this place is even bigger than the Halls, even more imposing.  What strange and luminous creature could be at the end of **this** strange place?](else: )[I am in a massive place with some kind of platform or throne wayyyyyyyy at the other end.  Giant rabbit statues tower above me, and this place is even bigger than the Halls, even more imposing. On it sits an enormous...rabbit, or luminous, rabbit-like machine.  Could this be an Ür?]
 
 [[I approach the throne-&gt;Tristan&#39;s Throne]] 
 
-or [[↩ Walk back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="69" name="Opened Hatch" tags="" position="2861,1274" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/halls-hatch-open-2.png&quot; class=&quot;limit&quot;&gt;
+or [[↩ Walk back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="69" name="Opened Hatch" tags="" position="2865,1762" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/halls-hatch-open-2.png&quot; class=&quot;limit&quot;&gt;
 
 (if: $hatch_opened is not 0)[This is the gateway between the Halls of the Ürs and the places beyond.](else: )[When I press the paw print, the hatch falls into the floor, and its handle clanks to the ground, almost hitting me.  Scary, but now a whole new place is before me.(set: $hatch_opened to true)]{
 
 }[[I can hop a little further beyond the door and peek out-&gt;Opened Hatch Peek]]
 
-or I can [[↩ walk back into the Halls-&gt;Right Hall]] </tw-passagedata></tw-storydata>
+or I can [[↩ walk back into the Halls-&gt;Right Hall]] </tw-passagedata><tw-passagedata pid="70" name="Orange Zone Steering Device" tags="" position="2354,1277" size="100,100">(if: $shield_refreshed is not 0)[&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/steering-position-2-shield.png&quot; class=&quot;limit&quot;&gt;](else: )[&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/steering-position-2.png&quot; class=&quot;limit&quot;&gt;]
+
+This device has spheres around spheres, and circles around circles.  Do they tell the Warren what direction to go?
+
+I see three large paw prints.  Two are side by side.  A larger one is below it.  They are larger than my paw but I could probably put my paw against them.
+
+The &lt;span class=&quot;steering-white&quot;&gt;white&lt;/span&gt; circle is around the &lt;span class=&quot;steering-orange&quot;&gt;orange&lt;/span&gt; dot.
+
+* The left paw print is &lt;span class=&quot;steering-red&quot;&gt;red&lt;/span&gt;, [[I press the right paw print-&gt;Red Zone Steering Device]]
+* The right paw print is &lt;span class=&quot;steering-green&quot;&gt;green&lt;/span&gt; [[I press the right paw print-&gt;Green Zone Steering Device]]
+* The large paw print is &lt;span class=&quot;steering-orange-pulse&quot;&gt;pulsing orange&lt;/span&gt;, [I Press the large paw print]&lt;presslarge|
+
+or, [[↩ step away from the machine-&gt;Top Hall]]
+{
+(click: ?presslarge)[(if: $shield_refreshed is not 0)[
+[[Moving THINGGG Death]]
+](else: )[
+[[Moving THUD Death Orange]]
+]
+}</tw-passagedata><tw-passagedata pid="71" name="Green Zone Steering Device" tags="" position="2483,1200" size="100,100">(set: $shield_refreshed to true)
+(if: $shield_refreshed is not 0)[&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/steering-position-3-green.png&quot; class=&quot;limit&quot;&gt;](else: )[&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/steering-position-3.png&quot; class=&quot;limit&quot;&gt;]
+
+This device has spheres around spheres, and circles around circles.  Do they tell the Warren what direction to go?
+
+I see three large paw prints.  Two are side by side.  A larger one is below it.  They are larger than my paw but I could probably put my paw against them.
+
+The &lt;span class=&quot;steering-white&quot;&gt;white&lt;/span&gt; circle is around the &lt;span class=&quot;steering-green&quot;&gt;green&lt;/span&gt; dot.
+
+* The left paw print is &lt;span class=&quot;steering-orange&quot;&gt;orange&lt;/span&gt;, [[I press the left paw print-&gt;Orange Zone Steering Device]]
+* The right paw print is &lt;span class=&quot;steering-dark&quot;&gt;dark&lt;/span&gt;, [I press the right paw print]&lt;pressright|
+* (if: $shield_refreshed is not 0)[The large paw print is &lt;span class=&quot;steering-green&quot;&gt;green&lt;/span&gt;, ](else: )[The large paw print is &lt;span class=&quot;steering-red-pulse&quot;&gt;pulsing red&lt;/span&gt;, ][I Press the large paw print]&lt;presslarge|
+
+or, [[↩ step away from the machine-&gt;Top Hall]]{
+(click-append: ?pressright)[&lt;span class=&quot;pulse-in&quot;&gt;, but nothing happens.&lt;/span&gt;]
+(click: ?presslarge)[
+  (if: $shield_refreshed is not 0)[
+    (goto: &quot;The Rabbits are Saved&quot;)
+  ](else: )[
+    (goto: &quot;Moving THUD Death Green&quot;)
+  ]
+]
+}
+</tw-passagedata><tw-passagedata pid="72" name="The Rabbits are Saved" tags="" position="2575,1050" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/w-familiar-place.png&quot; class=&quot;limit&quot;&gt;
+
+I feel this whole ball lurch and change direction.  I hear many &lt;span class=&quot;tinggg&quot;&gt;tinggg&lt;/span&gt;&lt;span class=&quot;tinggg&quot;&gt;tinggg&lt;/span&gt;&lt;span class=&quot;tinggg&quot;&gt;tinggg&lt;/span&gt; for a while, but they grow less and less, until, finally, all the shuddering noises are gone.  It seems like the rabbits must be protected for a long time now.
+
+Finally, I sleep.  Everyone knows the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt; stopped, but no one knows why.  No one needs to know.
+
+[[Start over?-&gt;The Thud]]</tw-passagedata><tw-passagedata pid="73" name="Moving THUD Death Green" tags="" position="2457,1045" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/rabbit-end-game-skull.png&quot; class=&quot;img-med&quot;&gt;
+
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+
+
+
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+
+
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+
+[[Rewind to the moment before this happened?-&gt;Green Zone Steering Device]]</tw-passagedata><tw-passagedata pid="74" name="Moving THINGGG Death" tags="" position="2230,1045" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/rabbit-end-game-skull.png&quot; class=&quot;img-med&quot;&gt;
+
+
+&lt;div class=&quot;tinggg&quot;&gt;TINGGG&lt;/div&gt;
+
+
+&lt;div class=&quot;tinggg&quot;&gt;TINGGG&lt;/div&gt;
+
+
+&lt;div class=&quot;tinggg&quot;&gt;TINGGG&lt;/div&gt;
+
+&lt;div class=&quot;tinggg&quot;&gt;TINGGG&lt;/div&gt;
+
+&lt;div class=&quot;tinggg&quot;&gt;TINGGG&lt;/div&gt;
+&lt;div class=&quot;tinggg&quot;&gt;TINGGG&lt;/div&gt;
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+
+[[Rewind to the moment before this happened?-&gt;Orange Zone Steering Device]]</tw-passagedata><tw-passagedata pid="75" name="Moving THUD Death Orange" tags="" position="2345,1045" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/rabbit-end-game-skull.png&quot; class=&quot;img-med&quot;&gt;
+
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+
+
+
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+
+
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+
+[[Rewind to the moment before this happened?-&gt;Orange Zone Steering Device]]</tw-passagedata><tw-passagedata pid="76" name="Portal to Ledge" tags="" position="4086,2986" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/portal.png&quot;  class=&quot;ur-throne&quot;&gt;
+
+KAZAAAAAAAAK!  PORTAl TIMe!
+
+[[Upper Ledge]]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
