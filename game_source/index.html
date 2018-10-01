@@ -477,7 +477,9 @@ section.ursmap table td.majestic div.arrow { font-size: 1.1em; }
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -1079,12 +1081,11 @@ The &lt;span class=&quot;steering-white&quot;&gt;white&lt;/span&gt; circle is ar
 or, [[↩ step away from the machine-&gt;Top Hall]]
 {
 (click: ?presslarge)[(if: $shield_refreshed is not 0)[
-[[Moving THINGGG Death]]
+	[[Moving THINGGG Death]]
 ](else: )[
-[[Moving THUD Death Orange]]
-]
-}</tw-passagedata><tw-passagedata pid="71" name="Green Zone Steering Device" tags="" position="2483,1200" size="100,100">(set: $shield_refreshed to true)
-(if: $shield_refreshed is not 0)[&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/steering-position-3-green.png&quot; class=&quot;limit&quot;&gt;](else: )[&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/steering-position-3.png&quot; class=&quot;limit&quot;&gt;]
+	[[Moving THUD Death Orange]]
+]]
+}</tw-passagedata><tw-passagedata pid="71" name="Green Zone Steering Device" tags="" position="2483,1200" size="100,100">(if: $shield_refreshed is not 0)[&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/steering-position-3-green.png&quot; class=&quot;limit&quot;&gt;](else: )[&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/steering-position-3.png&quot; class=&quot;limit&quot;&gt;]
 
 This device has spheres around spheres, and circles around circles.  Do they tell the Warren what direction to go?
 
