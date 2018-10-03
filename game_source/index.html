@@ -501,12 +501,11 @@ section.ursmap table td.majestic div.arrow { font-size: 1.1em; }
 
 
 
-</script><tw-passagedata pid="1" name="Upper Hub" tags="" position="1619,1007" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/w-3-tunnels-b.png&quot; class=&quot;limit&quot;&gt;
+</script><tw-passagedata pid="1" name="Upper Hub" tags="" position="1620.6666666666667,1007" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/w-3-tunnels-b.png&quot; class=&quot;limit&quot;&gt;
+(if: $diode_is_cleared is not 0)[ I hear a crackling sound coming from the tunnel above that was not there before. The air feels sharp and prickly on my fur and makes my nose twitch. I think this means the power is working! Maybe now I can [[↗ try to thicken the shell.-&gt;Usable Shield Room]] 
+I could also:](else: )[This is one of the oldest places of the rabbits.  We used to store some things here but now most rabbits have heard the stories of flefnards or tenneses that would leap upon you and eat you in one bite.  These beasts were there to protect the ancient places of the Ürs.  No one really knows anything about them.  No rabbit has been here in a long time.
 
-This is one of the oldest places of the rabbits.  We used to store some things here but now most rabbits have heard the stories of flefnards or tenneses that would leap upon you and eat you in one bite.  These beasts were there to protect the ancient places of the Ürs.  No one really knows anything about them.  No rabbit has been here in a long time.
-
-This is like an old tunnel hub, with a few tunnels twisting away into the distance.  I can:
-
+This is like an old tunnel hub, with a few tunnels twisting away into the distance.][[]]
 * [[↗ Follow the tunnel forward to a bright light, where the air hums and swells-&gt;Entrance to the Halls of the Ürs]] or 
 * (if: $diode_is_cleared is not 0)[[[↖ Follow the large side tunnel to a cool dark place, with a smell unlike any I have smelled-&gt;Lower Ledge With Diode]]](else: )[[[↖ Follow the large side tunnel to a cool dark place, with a smell unlike any I have smelled-&gt;Lower Ledge]]]
 * (if: $diode_is_cleared is not 0)[[[↑ Jump on a few rocks to climb up to an oddly placed upper tunnel-&gt;Upper Ledge With Diode]]](else: )[[[↑ Jump on a few rocks to climb up to an oddly placed upper tunnel-&gt;Blocked Upper Ledge]]]
@@ -828,15 +827,19 @@ This room has an amazing device in it, and is the most brightly colored of all t
 (if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
 Behind me is the [[Majestic Center Hall]] Ahead I see the a room with some (if: $hatch_opened is not 0)[[[giant circle gateway-&gt;Opened Hatch]]](else: )[[[giant circle gateway-&gt;Hatch Chamber]]] and (if: $diode_is_cleared is not 0)[[[in a corner room nearby-&gt;Usable Shield Room]]](else:)[[[in a corner room nearby-&gt;Unpowered Shield Room]]] I see some kind of device, and I can hear it from here, whirring softly.
 
-&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↑-&gt;Top Right Hall]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[←-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;(if: $hatch_opened is not 0)[[[→-&gt;Opened Hatch]]](else: )[[[→-&gt;Hatch Chamber]]]&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;(if: $diode_is_cleared is not 0)[[[↓-&gt;Usable Shield Room]]](else:)[[[↓-&gt;Unpowered Shield Room]]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="38" name="Usable Shield Room" tags="" position="2632,2353" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/
+&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[↑-&gt;Top Right Hall]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;[[←-&gt;Majestic Center Hall]]&lt;/div&gt;&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;(if: $hatch_opened is not 0)[[[→-&gt;Opened Hatch]]](else: )[[[→-&gt;Hatch Chamber]]]&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;(if: $diode_is_cleared is not 0)[[[↓-&gt;Usable Shield Room]]](else:)[[[↓-&gt;Unpowered Shield Room]]]&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="38" name="Usable Shield Room" tags="" position="2728.666666666667,2449.6666666666665" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/
 halls-sw-2.png&quot; class=&quot;limit&quot;&gt;
+
 (if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
-This hall is like the others, except there is a strange device here, and in one corner of it, it looks like there&#39;s a window to another world and a prominent paw print. (if: $shield_refreshed is not 0)[The paw print is glowing, and the window shines brightly.](else:)[[I could touch my tiny paw to the huge paw print.]&lt;activateshield|]
+This hall is like the others, except there is a strange device here, and in one corner of it, it looks like there&#39;s a window to another world and a prominent paw print. (if: $shield_refreshed is not 0)[The paw print is glowing, and the window shines brightly. THE SHELL IS THICKENED!
+](else:)[[I could touch my tiny paw to the huge paw print.]&lt;activateshield|]
 
 (click: ?activateshield)[(set: $shield_refreshed to true)(set: $chance_of_thud_in_halls to $thinggg_in_halls)(show: ?pressing)(replace: ?activateshield)[The paw print is glowing, and the window shines brightly.]]{
 }[
-&lt;div class=&quot;pulse-in&quot;&gt;In the distance, I hear a mighty crackling, and the window to another place shines so much it hurts my eyes for a moment.&lt;/div&gt;](pressing|{
-}(if: $shield_refreshed is not 0)[[[I move closer to get a look at the window-&gt;Shield THUD Viewscreen]]](else:)[[[I move closer to get a look at the window-&gt;Shield Activated Viewscreen]]]
+&lt;div class=&quot;pulse-in&quot;&gt;In the distance, I hear a mighty crackling, and the window to another place shines so much it hurts my eyes for a moment. Something in the window has changed.[[ Look at the window-&gt;Master Viewscreen]]&lt;/div&gt;](pressing|{
+}
+[[I could move closer to get a look at the window-&gt;Master Viewscreen]]
+
 
 &lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[↑-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[←-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="39" name="Long Landscape" tags="" position="3383,616" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/surface-2.png&quot; class=&quot;fullwidth&quot;&gt;
 
@@ -1035,7 +1038,7 @@ We do not build.  We do not control.  We ARE.  And noe.  That is finally what wi
 
 [[&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;Thank you sir, for putting my mind at ease.  You&#39;re right, these explosions will die down soon.  I&#39;ll get back to work.&lt;/span&gt;&lt;/div&gt;-&gt;The End From Giving Up]]
 or
-[[&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;With all respect sire, it&#39;s only gotten worse and worse.  I think you might not be experiencing the same thing I am.&lt;span&gt;&lt;/div&gt;-&gt;The Warrenherd&#39;s Distraction]]}</tw-passagedata><tw-passagedata pid="61" name="Shield Activated Viewscreen" tags="" position="2490,2566" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/shield-activated-ting.png&quot; class=&quot;limit&quot;&gt;
+[[&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;With all respect sire, it&#39;s only gotten worse and worse.  I think you might not be experiencing the same thing I am.&lt;span&gt;&lt;/div&gt;-&gt;The Warrenherd&#39;s Distraction]]}</tw-passagedata><tw-passagedata pid="61" name="Shield Activated Viewscreen" tags="" position="2535,2649.3333333333335" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/shield-activated-ting.png&quot; class=&quot;limit&quot;&gt;
 
 I look at this strange window and see the largest room you can imagine.  The glowing roof is now fully powered, and when a big rock hits it, it makes a more muted sound.  Kind of a sound like,
 
@@ -1253,7 +1256,29 @@ There is bright light and cool air coming from somewhere further up the tunnel b
 
 I DIG!!! but my little paws were meant for softer things and are impotent against solid rock. I am certain I could move them from the other side and push them down the tunnel but from this side I can do nothing.
 
- [[All I can do is scoot back down the tiny tunnel back to the upper hub-&gt;Upper Hub]]</tw-passagedata></tw-storydata>
+ [[All I can do is scoot back down the tiny tunnel back to the upper hub-&gt;Upper Hub]]</tw-passagedata><tw-passagedata pid="79" name="Master Viewscreen" tags="" position="2915.3333333333335,2429.666666666667" size="100,100">(if: $shield_refreshed is not 0)[&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/shield-activated-ting.png&quot; class=&quot;limit&quot;&gt;
+
+I look at this strange window and see that the glowing roof is now fully powered! When a big rock hits it, it makes a more muted sound.  Kind of a sound like,
+
+&lt;div class=&quot;tinggg&quot;&gt;TINGGG&lt;/div&gt;
+
+The giant rocks just bounce off.  Perhaps the Warren is safe now, but I can&#39;t be sure.  Maybe there&#39;s a way to make it safe for longer.
+
+[[↩ step away from the machine-&gt;Usable Shield Room]]
+
+](else:)[&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/
+surface-meteor-strike.png&quot; class=&quot;limit&quot;&gt;
+&lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
+
+I look at this strange window and again I see the largest room I can imagine. I can also see the rabbit shaped tower in the distance. The giant are rocks are still hitting the roof of this huge space! I can see this thin roof crackle and shake each time. It gets thinner and thinner with every rock that hits it. I know it was made to protect against the rocks, so why is it still not doing a good job?.
+
+There must be something else I need to do to thicken it.
+ 
+[[↩ step away from the machine-&gt;Usable Shield Room]]
+
+]
+
+</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
