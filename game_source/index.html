@@ -147,13 +147,19 @@ span.tinggg {
 	LURCH STYLES
 */
 
-.lurch {
+@keyframes impact-lurch {
+    0% { transform: scale(1,1) translate(0, 0);}
+   20% { transform: scale(1.4,1) translate(4em,0); }
+  100% { transform: scale(1,1) translate(0, 0); }
+  }
+.lurch {  
   font-size: 4.1em;
   color: red;
   font-family: 'Faster One', cursive;
   display: block;
   padding:.3em;
   text-shadow: .02em .02em #424256;
+  animation: impact-lurch .6s 5;
 }
 
 
@@ -1002,7 +1008,7 @@ The passageway leads down to the beginning of a huge place.  Giant rabbit statue
 
 [[I continue on to see what this place contains-&gt;Sioban&#39;s Palace]]
 
-or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="54" name="Sioban&#39;s Throne" tags="" position="4025,2430" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-shield-rabbit.png&quot;  class=&quot;ur-throne&quot;&gt;(set: $ur_visited to true)(set: $sioban_visited to true)
+or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="54" name="Sioban&#39;s Throne" tags="" position="4023.3333333333335,2428.3333333333335" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-shield-rabbit.png&quot;  class=&quot;ur-throne&quot;&gt;(set: $ur_visited to true)(set: $sioban_visited to true)
 
 &lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;urspeak&quot;&gt;Young rabbit of the pits, I am the one who is Sioban&lt;span&gt;&lt;/div&gt;{
 
@@ -1027,13 +1033,19 @@ Our moving time is done.  We are all in our sitting time.  Our breeding time nev
 To THICKEN the SHELL one must have POWER. That POWER I do not possess. EBONY is of POWER. Go and speak with EBONY. If EBONY will hear you. EBONY may not. With power, ACTIVATE and the shell will THICKEN of its own. It is as it must be. It is as I have made. Be wary, the SHELL must be thick  before STEERING Adrastea, else asteroids will destroy Adrastea before you make it to safety.  
 &lt;span&gt;&lt;/div&gt;{
 
+}&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;urspeak&quot;&gt;
+You are the same cold stone as me.  It is not necessary to persist in bending your fate.  Rest, young rabbit.  It might just work out.  
+&lt;span&gt;&lt;/div&gt;{
+
+}&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;[[I can&#39;t see why it would matter, I guess.-&gt;Dying from getting talked out of it by Sioban for real]]&lt;/span&gt;&lt;/div&gt;{
+
 }[[↩ Walk all the way back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="55" name="Ebony&#39;s Vestibule" tags="" position="4584,1956" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-lobby-tristan.png&quot;  class=&quot;img-gen&quot;&gt;
 
 The passageway leads down to the beginning of a huge place.  Giant rabbit statues tower above me.
 
 I [[continue on to see what this place holds-&gt;Ebony&#39;s Palace]] 
 
-or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="56" name="Ebony&#39;s Throne" tags="" position="4575,2461" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/first-of-the-Ur.png&quot;  class=&quot;ur-throne&quot;&gt;(set: $ur_visited to true)(set: $ebony_visited to true)(set: $ebony_advice_about_rubble to true)
+or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="56" name="Ebony&#39;s Throne" tags="" position="4576.666666666667,2461" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/first-of-the-Ur.png&quot;  class=&quot;ur-throne&quot;&gt;(set: $ur_visited to true)(set: $ebony_visited to true)(set: $ebony_advice_about_rubble to true)
 
 &lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;urspeak&quot;&gt;Young rabbit of the underholes, I am the one who is Ebony&lt;span&gt;&lt;/div&gt;{
 
@@ -1045,13 +1057,19 @@ or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-p
 
 }&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;urspeak&quot;&gt;You need to turn the shell to this place on?  There is no point!  It is only a rock.  If you insist, uncover the generator diode at the foot the transformer. From it the POWER will flow. The transformer is atop the idol of the primitive underhole rabbits. I am sure of it. I really don&#39;t know. If you care so much, I can [[take you there with my mind.-&gt;Portal to Ledge]] and you can find out for yourself. Or not. &lt;span&gt;&lt;/div&gt;{
 
+}&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;urspeak&quot;&gt;
+Just remember, for every rock you move, you are also moved.  There is a power in stillness.  Don&#39;t think you can just shove things to and fro. 
+&lt;span&gt;&lt;/div&gt;{
+
+}&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;[[You&#39;re right, sir Ebony.  I am not a fan of mind journeys, just regular journeys.  Unless... perhaps... send me home?-&gt;The end from getting talked out of it by Ebony]]&lt;/span&gt;&lt;/div&gt;{
+
 }[[↩ Walk all the way back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="57" name="Tristan&#39;s Vestibule" tags="" position="5196,1939" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-lobby-ebony.png&quot;  class=&quot;img-gen&quot;&gt;
 
 The passageway leads down to the beginning of a huge place.  Giant rabbit statues tower above me.
 
 I [[continue on to see what this place is-&gt;Tristan&#39;s Palace]]
 
-or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="58" name="Tristan&#39;s Throne" tags="" position="5226,2408" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-tristan.png&quot; class=&quot;ur-throne&quot;&gt;(set: $ur_visited to true)(set: $tristan_visited to true)
+or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="58" name="Tristan&#39;s Throne" tags="" position="5224.333333333333,2408" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ur-tristan.png&quot; class=&quot;ur-throne&quot;&gt;(set: $ur_visited to true)(set: $tristan_visited to true)
 
 &lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;urspeak&quot;&gt;Young rabbit of the underholes, I am the one who is Tristan&lt;span&gt;&lt;/div&gt;{
 
@@ -1064,6 +1082,12 @@ We do not build.  We do not control.  We ARE.  And noe.  That is finally what wi
 }&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;STEER? Ok, how do I move this place then?&lt;/span&gt;&lt;/div&gt;{
 
 }&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;urspeak&quot;&gt;Set the reticle of the STEERING CORE to GREEN.  If you really feel like it&#39;s important.  I can tell you though, it is not.  Listen to me and just find a place to rest until the end.&lt;span&gt;&lt;/div&gt;{
+
+}&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;urspeak&quot;&gt;
+JThere is only one way to go, and that is the way you are going.  Why go to a different place.   This rock Adrastea came from so far away.  Now it is here.  This is the place where Adrastea is.
+&lt;span&gt;&lt;/div&gt;{
+
+}&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;[[This... is as it is supposed to be?  That seems right.-&gt;Dying from getting talked out of it by Tristan]]&lt;/span&gt;&lt;/div&gt;{
 
 }[[↩ Walk all the way back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="59" name="Warrenherd Speech 1" tags="" position="1064,221" size="100,100">{&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;warrenherdspeak&quot;&gt;My perfect, young one.  The &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt; has come and gone before many times.  It&#39;s true that this seems a little more than usual, but you don&#39;t remember very severe times before you were even a kit.&lt;/span&gt;&lt;/div&gt;
 
@@ -1224,7 +1248,7 @@ You didn&#39;t move the warren to a safe place, even though the shell was thicke
 
 Maybe with the shell thickened, you could have moved the Warren to safety, I mean, if you&#39;d pointed it in the right direction.
 
-[[Rewind to the moment before this happened?-&gt;Green Zone Steering Device]]</tw-passagedata><tw-passagedata pid="76" name="Portal to Ledge" tags="" position="4086,2984" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/portal.png&quot;  class=&quot;ur-throne&quot;&gt;
+[[Rewind to the moment before this happened?-&gt;Green Zone Steering Device]]</tw-passagedata><tw-passagedata pid="76" name="Portal to Ledge" tags="" position="4101,3574" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/portal.png&quot;  class=&quot;ur-throne&quot;&gt;
 
 One moment I am speaking with the Ür-rabbit Ebony and then the next
 [[I am in some strange place far away.-&gt;Upper Ledge]]</tw-passagedata><tw-passagedata pid="77" name="Credits?" tags="" position="15,1220" size="100,100">Made by Christopher Hayes (reptilemind.com), and Daniel Talsky (danieltalsky.com), two guys who are friends.  They just did this so they would have something to do besides just watch Sci-Fi and Better Call Saul and drink beer.  No rabbits were hurt in the making of this interactive-ish fiction-ish.
@@ -1294,27 +1318,21 @@ It seems like the rabbits must be protected for a long time now.
 I return to the warren and finally, I curl up in the fluffle huddle and sleep. 
 Everyrabbit knows the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt; has stopped, but none know why.  
 
-[&lt;span class=&quot;hidden-link&quot;&gt;[[No one needs to know...-&gt;One Last Adventure]]&lt;/span&gt;]
+[[No one needs to know...-&gt;One Last Adventure]]</tw-passagedata><tw-passagedata pid="84" name="One Last Adventure" tags="" position="392.66666666666674,1603.6666666666667" size="100,100">... except maybe one ... 
 
-[[Epilogue-&gt;The Rabbits are Saved]]</tw-passagedata><tw-passagedata pid="84" name="One Last Adventure" tags="" position="392.66666666666674,1603.6666666666667" size="100,100">... except maybe one ... 
-
-[[- I tell the old River Rabbit about my adventure and how I saved the Warren-&gt;Return to The River]]
-
-[[- I say nothing and let the old rabbit be.-&gt;The Rabbits are Saved]]</tw-passagedata><tw-passagedata pid="85" name="Return to The River" tags="" position="399.3333333333335,1747" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/river-rabbit-convo-cu.png&quot; class=&quot;limit&quot;&gt;
+* [[I tell the old River Rabbit about my adventure and how I saved the Warren-&gt;Return to The River]]
+* [[I say nothing and let the old rabbit be.-&gt;The Rabbits are Saved]]</tw-passagedata><tw-passagedata pid="85" name="Return to The River" tags="" position="394.3333333333335,1742" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/river-rabbit-convo-cu.png&quot; class=&quot;limit&quot;&gt;
 
 I return to the river.
-
 The River Rabbit regards me a little suspiciously, but then recognizes me.
 &lt;span class=&quot;riverrabbitspeak&quot;&gt;Ye again. Find what Ye seeked? &lt;/span&gt;
 What should I say?
-
 |ursquestion&gt;[&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;I found the places of the Ür-rabbits, They were not responsible for the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt; but they told me what to do to make the warren safe.&lt;/div&gt;]|ursresponse)[&lt;div class=&quot;speech other&quot;&gt;
 I tell the River Rabbit about the Ürs in as much detail as I can remember. I describe Sioban, Ebony and Tristan and how even though the Ür-rabbits made a great show of not caring, in the end, they helped to save the warren. 
 &lt;span class=&quot;riverrabbitspeak&quot;&gt;So thee old stories are true. Ye found thee great places of the Ürs and returned to tell of it! This old rabbit was wrong to advise Ye against it. Good for you Young One, for once this old rabbit is glad to have been wrong.&lt;/span&gt;&lt;/div&gt;](click: ?ursquestion)[ (show: ?ursresponse) ]
 |riverquestion&gt;[&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;I saw many strange and wonderful things on the other side of the river.&lt;/span&gt;&lt;/div&gt;]|riverresponse)[&lt;div class=&quot;speech other&quot;&gt;
 I tell the River Rabbit about the Halls of the Ürs, the many strange devices and all of the things I had to do to make the warren safe. I tell the old rabbit about the metal tettle plant and how it singed my tail. The old rabbit laughs. I describe the strange little baths in the large empty rooms with no water and the brightly colored object with a paw print too large for my tiny paw to press. 
-&lt;span class=&quot;riverrabbitspeak&quot;&gt;New great mysteries of rabbits! These strange and wonderful things I would like to see. [[This old rabbit may have one hop left in it still-&gt;Over The River One Last Time]] before the time comes to join with the river and go forever wherever it flows. &lt;/span&gt;&lt;/div&gt;](click: ?riverquestion)[ (show: ?riverresponse) ]
-</tw-passagedata><tw-passagedata pid="86" name="Over The River One Last Time" tags="" position="399.3333333333335,1897" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/river-rabbit-hopp-1.png&quot; class=&quot;limit&quot;&gt;
+&lt;span class=&quot;riverrabbitspeak&quot;&gt;New great mysteries of rabbits! These strange and wonderful things I would like to see. [[This old rabbit may have one hop left in it still-&gt;Over The River One Last Time]] before the time comes to join with the river and go forever wherever it flows. &lt;/span&gt;&lt;/div&gt;](click: ?riverquestion)[ (show: ?riverresponse) ]</tw-passagedata><tw-passagedata pid="86" name="Over The River One Last Time" tags="" position="399.3333333333335,1897" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/river-rabbit-hopp-1.png&quot; class=&quot;limit&quot;&gt;
 
 We hop together to the edge of the river and I leap to the other side.  
 
@@ -1350,7 +1368,25 @@ The air is fresh and clean and its scent is familiar.
 The River Rabbit and I sit together in silence for a long, long time...
 and contemplate the great mystery of rabbits.
 
-[[Epilogue-&gt;The Rabbits are Saved]]</tw-passagedata></tw-storydata>
+[[Epilogue-&gt;The Rabbits are Saved]]</tw-passagedata><tw-passagedata pid="92" name="Dying from getting talked out of it by Sioban for real" tags="" position="4028.333333333333,2685.0000000000005" size="200,200">&lt;div class=&quot;thud&quot;&gt;THUD THUD THUD&lt;/div&gt;
+&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/explosion.png&quot; class=&quot;img-med&quot;&gt;
+&lt;div class=&quot;thud&quot;&gt;KRRRRAAKAKKK&lt;/div&gt;
+
+This doesn&#39;t matter.
+
+[[Rewind to the moment before this happened?-&gt;Sioban&#39;s Throne]]</tw-passagedata><tw-passagedata pid="93" name="The end from getting talked out of it by Ebony" tags="" position="4586.666666666667,2737.666666666667" size="200,200">&lt;div class=&quot;thud&quot;&gt;THUD THUD THUD&lt;/div&gt;
+&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/explosion.png&quot; class=&quot;img-med&quot;&gt;
+&lt;div class=&quot;thud&quot;&gt;KRRRRAAKAKKK&lt;/div&gt;
+
+You are home.
+
+[[Rewind to the moment before this happened?-&gt;Ebony&#39;s Throne]]</tw-passagedata><tw-passagedata pid="94" name="Dying from getting talked out of it by Tristan" tags="" position="5214.333333333333,2681.3333333333335" size="200,200">&lt;div class=&quot;thud&quot;&gt;THUD THUD THUD&lt;/div&gt;
+&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/explosion.png&quot; class=&quot;img-med&quot;&gt;
+&lt;div class=&quot;thud&quot;&gt;KRRRRAAKAKKK&lt;/div&gt;
+
+You have found the right place.
+
+[[Rewind to the moment before this happened?-&gt;Tristan&#39;s Throne]]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
