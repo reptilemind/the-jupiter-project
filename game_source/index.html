@@ -515,7 +515,9 @@ section.ursmap table td.majestic div.arrow { font-size: 1.1em; }
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -640,7 +642,7 @@ I can [leap up onto the great handle to see if I can somehow move it]&lt;hatchle
 or [[↩ walk back into the halls.-&gt;Right Hall]](click: ?hatchleap)[(show: ?hatchbounce)]
 
 &lt;section class=&quot;ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[←-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;
-</tw-passagedata><tw-passagedata pid="16" name="The Thud" tags="" position="257,199" size="100,100">
+</tw-passagedata><tw-passagedata pid="16" name="The Thud" tags="" position="257,200" size="100,100">
 
 Another &lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;   
 
@@ -669,7 +671,8 @@ Some clouds of dust swirl around, but these well-built halls remain intact.
 (set: $shield_refreshed to 0)
 (set: $hatch_opened to 0)
 (set: $ur_visited to 0)
-(set: $dug_to_monolith to 0)</tw-passagedata><tw-passagedata pid="17" name="The Worst One" tags="" position="437,211" size="100,100">
+(set: $dug_to_monolith to 0)
+(set: $returned_to_river to 0)</tw-passagedata><tw-passagedata pid="17" name="The Worst One" tags="" position="437,211" size="100,100">
 ... maybe the worst &lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt; yet,
 
 [[I remember...-&gt;I Remember]]</tw-passagedata><tw-passagedata pid="18" name="I Remember" tags="" position="590,232" size="100,100">
@@ -1126,7 +1129,7 @@ This hall is like the others, except there is a strange device here, and in one 
 ](pressing|{
 }[[I could move closer to get a look at the window-&gt;Shield THUD Viewscreen]]
 
-&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[↑-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[←-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="63" name="Pushin&#39; Rubble" tags="" position="2102,448" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ledge-norubble-diode.png&quot; class=&quot;img-gen&quot;&gt;
+&lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[↑-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[←-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="63" name="Pushin&#39; Rubble" tags="" position="2103,448" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ledge-norubble-diode.png&quot; class=&quot;img-gen&quot;&gt;
 
 It&#39;s obvious the rubble is covering something, I use my powerful rabbit legs to shove the rocks away, and a weird tettleplant made of metal is revealed!  Maybe this will make something else work.
 
@@ -1228,7 +1231,7 @@ It has now been so many growing cycles without the THUD that I no longer count t
 
 The fur on my ears grows thin. 
 
-The river rabbit was right. “If you think more rabbits need to be born then I guess you can try and do something about it.” was the advice that crazy old rabbit gave me.
+The (if: $returned_to_river is not 0)[River Rabbit](else: )[[[River Rabbit-&gt;Return to The River]]] was right. “If you think more rabbits need to be born then I guess you can try and do something about it.” was the advice that wise old rabbit gave me.
 
 Well, I did something about it.
 
@@ -1320,16 +1323,16 @@ Everything is safe.
 It seems like the rabbits must be protected for a long time now.
 
 [[Return To The Warren]]
-</tw-passagedata><tw-passagedata pid="83" name="Return To The Warren" tags="" position="136,1502" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/w-familiar-place.png&quot; class=&quot;limit&quot;&gt;
+</tw-passagedata><tw-passagedata pid="83" name="Return To The Warren" tags="" position="137,1503" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/w-familiar-place.png&quot; class=&quot;limit&quot;&gt;
 
 I return to the warren and finally, I curl up in the fluffle huddle and sleep. 
 Everyrabbit knows the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt; has stopped, but none know why.  
 
-[[No one needs to know...-&gt;One Last Adventure]]</tw-passagedata><tw-passagedata pid="84" name="One Last Adventure" tags="" position="392,1603" size="100,100">
+[[No one needs to know...-&gt;One Last Adventure]]</tw-passagedata><tw-passagedata pid="84" name="One Last Adventure" tags="" position="392,1611" size="100,100">
 except maybe one ... 
 
 * [[I tell the old River Rabbit about my adventure and how I saved the Warren-&gt;Return to The River]]
-</tw-passagedata><tw-passagedata pid="85" name="Return to The River" tags="" position="394,1742" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/river-rabbit-convo-cu.png&quot; class=&quot;limit&quot;&gt;
+* [[I say nothing and let the old rabbit be.-&gt;The Rabbits are Saved]]</tw-passagedata><tw-passagedata pid="85" name="Return to The River" tags="" position="394,1742" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/river-rabbit-convo-cu.png&quot; class=&quot;limit&quot;&gt;
 
 I return to the river.
 The River Rabbit regards me a little suspiciously, but then recognizes me.
@@ -1340,7 +1343,8 @@ I tell the River Rabbit about the Ürs in as much detail as I can remember. I de
 &lt;span class=&quot;riverrabbitspeak&quot;&gt;So thee old stories are true. Ye found thee great places of the Ürs and returned to tell of it! This old rabbit was wrong to advise Ye against it. Good for you Young One, for once this old rabbit is glad to have been wrong.&lt;/span&gt;&lt;/div&gt;](click: ?ursquestion)[ (show: ?ursresponse) ]
 |riverquestion&gt;[&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;I saw many strange and wonderful things on the other side of the river.&lt;/span&gt;&lt;/div&gt;]|riverresponse)[&lt;div class=&quot;speech other&quot;&gt;
 I tell the River Rabbit about the Halls of the Ürs, the many strange devices and all of the things I had to do to make the warren safe. I tell the old rabbit about the metal tettle plant and how it singed my tail. The old rabbit laughs. I describe the strange little baths in the large empty rooms with no water and the brightly colored object with a paw print too large for my tiny paw to press. 
-&lt;span class=&quot;riverrabbitspeak&quot;&gt;New great mysteries of rabbits! These strange and wonderful things I would like to see. [[This old rabbit may have one hop left in it still-&gt;Over The River One Last Time]] before the time comes to join with the river and go forever wherever it flows. &lt;/span&gt;&lt;/div&gt;](click: ?riverquestion)[ (show: ?riverresponse) ]</tw-passagedata><tw-passagedata pid="86" name="Over The River One Last Time" tags="" position="399,1897" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/river-rabbit-hopp-1.png&quot; class=&quot;limit&quot;&gt;
+&lt;span class=&quot;riverrabbitspeak&quot;&gt;New great mysteries of rabbits! These strange and wonderful things I would like to see. [[This old rabbit may have one hop left in it still-&gt;Over The River One Last Time]] before the time comes to join with the river and go forever wherever it flows. &lt;/span&gt;&lt;/div&gt;](click: ?riverquestion)[ (show: ?riverresponse) ]
+(set: $returned_to_river to true)</tw-passagedata><tw-passagedata pid="86" name="Over The River One Last Time" tags="" position="399,1897" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/river-rabbit-hopp-1.png&quot; class=&quot;limit&quot;&gt;
 
 We hop together to the edge of the river and I leap to the other side.  
 
@@ -1370,7 +1374,7 @@ A great blast of air rushes in, blowing back our ears.
 
 The air is fresh and clean and its scent is familiar.
 
-[[The old rabbit and I hop down the tunnel-&gt;The Rivers Secret]]</tw-passagedata><tw-passagedata pid="91" name="The Rivers Secret" tags="" position="399,2650" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/river-revealed.png&quot; class=&quot;limit&quot;&gt;
+[[The old rabbit and I hop down the tunnel-&gt;The Rivers Secret]]</tw-passagedata><tw-passagedata pid="91" name="The Rivers Secret" tags="" position="400,2650" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/river-revealed.png&quot; class=&quot;limit&quot;&gt;
 
 
 The River Rabbit and I sit together in silence for a long, long time...
