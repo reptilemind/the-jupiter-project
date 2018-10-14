@@ -535,18 +535,9 @@ section.ursmap table td.majestic div.arrow { font-size: 1.1em; }
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -680,17 +671,7 @@ Some clouds of dust swirl around, but these well-built halls remain intact.
 
 Some clouds of dust swirl around, but these well-built halls remain intact.
 &quot;))
-(set: $chance_of_thud_in_halls to $thud_in_halls){
-&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
-&lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-126698334-1&quot;&gt;&lt;/script&gt;
-&lt;script&gt;
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag(&#39;js&#39;, new Date());
-
-  gtag(&#39;config&#39;, &#39;UA-126698334-1&#39;);
-&lt;/script&gt;
-}
+(set: $chance_of_thud_in_halls to $thud_in_halls)
 (set: $diode_is_cleared to 0)
 (set: $shield_refreshed to 0)
 (set: $hatch_opened to 0)
@@ -1423,7 +1404,31 @@ You are home.
 
 You have found the right place.
 
-[[Rewind to the moment before this happened?-&gt;Tristan&#39;s Throne]]</tw-passagedata><tw-passagedata pid="95" name="Ürs Title Card" tags="" position="99,53.33333333333333" size="200,100">[[&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/The-city-of-uR-cover-e.png&quot; class=&quot;limit&quot;&gt;-&gt;The Thud]]
+[[Rewind to the moment before this happened?-&gt;Tristan&#39;s Throne]]</tw-passagedata><tw-passagedata pid="95" name="Ürs Title Card" tags="" position="99,53" size="200,100">{
+&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+&lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-126698334-1&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(&#39;js&#39;, new Date());
+
+  gtag(&#39;config&#39;, &#39;UA-126698334-1&#39;);
+  
+document.addEventListener(&#39;click&#39;, function (event) {
+
+	if (event.target.matches(&#39;tw-link&#39;)) {
+		var passageName = event.target.getAttribute(&#39;passage-name&#39;);
+		ga(&#39;send&#39;, {
+  			hitType: &#39;event&#39;,
+  			eventCategory: &#39;Navigation&#39;,
+  			eventAction: &#39;move-to&#39;,
+  			eventLabel: passageName
+});
+	}
+
+}, false);  
+&lt;/script&gt;
+}[[&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/The-city-of-uR-cover-e.png&quot; class=&quot;limit&quot;&gt;-&gt;The Thud]]
 &lt;div id=&quot;credits&quot;&gt;(align: &quot;=&gt;&lt;=&quot;)[&lt;span style=&quot;font-size:1.7em;&quot;&gt;a gamestorybook by&lt;/span&gt;
 
 
