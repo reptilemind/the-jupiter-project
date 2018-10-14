@@ -1413,17 +1413,15 @@ You have found the right place.
   gtag(&#39;js&#39;, new Date());
 
   gtag(&#39;config&#39;, &#39;UA-126698334-1&#39;);
-  
+
 document.addEventListener(&#39;click&#39;, function (event) {
 
 	if (event.target.matches(&#39;tw-link&#39;)) {
 		var passageName = event.target.getAttribute(&#39;passage-name&#39;);
-		ga(&#39;send&#39;, {
-  			hitType: &#39;event&#39;,
-  			eventCategory: &#39;Navigation&#39;,
-  			eventAction: &#39;move-to&#39;,
-  			eventLabel: passageName
-});
+		gtag(&#39;event&#39;, &#39;Navigation&#39;, {
+		  &#39;event_label&#39;: passageName,
+		  &#39;event_category&#39;: &#39;Click&#39;,
+		});
 	}
 
 }, false);  
