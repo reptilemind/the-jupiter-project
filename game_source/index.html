@@ -22,9 +22,10 @@ body {	background-color: #001021; }
 /* title page */
 #credits {
   margin: -1em 0em .5em 0em;
-  font-family: 'Kirang Haerang', ariel;
+  font-family: 'Kirang Haerang', sans-serif;
 }
-#start {font-family: 'Kirang Haerang', ariel;font-size:3.5em;}
+#start {font-family: 'Faster One', sans-serif; font-size: 3.9em; line-height: 1.05em; letter-spacing: .09em;}
+#start a {text-shadow: 0 0 0;}
 #feedback {font-size:1.3em;margin-bottom:-1.5em;}
 #feedback a {text-decoration:none; color: #ec40eb; font-weight: bold; text-shadow: 0 0 5px #ef2700; }
 #feedback a:hover {
@@ -116,7 +117,7 @@ span.pulse-in {
 tw-story .thud {
   font-size: 8em;
   color: #9C3108;
-  font-family: 'Flavors', cursive;
+  font-family: 'Flavors', sans-serif;
   display: inline-block;
   animation: impact-thud 2.5s infinite;
   text-shadow: .05em .05em black;
@@ -169,7 +170,7 @@ span.tinggg {
 .lurch {  
   font-size: 4.1em;
   color: red;
-  font-family: 'Faster One', cursive;
+  font-family: 'Faster One', sans-serif;
   display: block;
   padding:.3em;
   text-shadow: .02em .02em #424256;
@@ -357,7 +358,7 @@ tw-story .urspeak {
   display: block;
   font-size: 1.7em;
   color: #E05F74;
-  font-family: 'Kirang Haerang', cursive;
+  font-family: 'Kirang Haerang', sans-serif;
   animation: floating 6s infinite;
 }
 tw-story .urspeak::first-letter {
@@ -365,7 +366,29 @@ tw-story .urspeak::first-letter {
   color: #DD929E;
 }
 
-
+/* Rabbits */
+@keyframes mesmerize {
+  	10% {color:#ADC3D8;}
+    20% {color:#ef2700;}
+    30% {color:#00ff00;}
+    40% {color:#102DD3;}
+    50% {color: red;}
+    60% {color:#6941e1;} 
+    80% {color:#8080A7;} 
+    100% {color: #ADC3D8;}
+}
+tw-story .rabbits { 
+  position: relative;
+  display: block;
+  font-size: 2em;
+  color: #ADC3D8;
+  font-family: 'Kirang Haerang', cursive;
+  animation: mesmerize 30s infinite;
+}
+tw-story .rabbits::first-letter {
+  font-size: 2.8em;
+  color: #DD929E;
+}
 
 /* HALLS OF THE ÜRS MAP */
 
@@ -385,6 +408,34 @@ tw-sidebar { display: none; }
 tw-icon {}
 tw-icon.undo {}
 tw-icon.redo {}
+
+/*
+*
+* TABLET ONLY RULEZ JUST FOR CHRIS
+*
+*/
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+  tw-story {
+	  font-size: 3em;
+	  width: 100%;
+	  max-width: 95%;
+	  margin: 0 auto 0 auto;
+	  padding: 20% 10%;
+  }
+
+  tw-passage {
+	  width: 100%;
+  }  
+  
+  div.thud {
+	line-height: 180%;
+  }
+  
+  .thud {
+	display: inline;	
+  }
+}	
 
 /*
 *
@@ -537,7 +588,11 @@ section.ursmap table td.majestic div.arrow { font-size: 1.1em; }
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
 
 
 
@@ -595,7 +650,7 @@ A passageway leads ever downward.
 
 [[I follow it.-&gt;Ebony&#39;s Vestibule]] 
 
-or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="7" name="Tunnel Hub" tags="" position="330,717" size="200,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/tunnel-hub-1200.png&quot;  Style=&quot;width:100%;&quot;&gt;
+or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="7" name="Tunnel Hub" tags="" position="330,717" size="200,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/tunnel-hub-1200.png&quot;  Style=&quot;width:100%;&quot;&gt;(if: $chance_of_thud_in_warren is not 0)[(either: ...$chance_of_thud_in_warren)]
 
 The Hub is the heart of the warren. All of its tunnels were dug by my brethren rabbits and even some were dug by yours truly. We are told by the Warrenherd to make each tunnel wider than it is tall, we don&#39;t know why but we try. We don&#39;t always get it right.  It is easy to get carried away and dig too far in one direction and not the other. Oh well. 
 
@@ -604,20 +659,20 @@ From the Hub, tunnels lead to all of the special places that keep The Warren run
 * [[The Nursery]] 
 * [[The Warrenherd]] 
 * [[The Farm]] 
-* [[The River]] </tw-passagedata><tw-passagedata pid="8" name="Sleeping Quarters" tags="" position="515,1080" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/w-familiar-place.png&quot; class=&quot;limit&quot;&gt;
+* [[The River]] </tw-passagedata><tw-passagedata pid="8" name="Sleeping Quarters" tags="" position="515,1080" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/w-familiar-place.png&quot; class=&quot;limit&quot;&gt;(if: $chance_of_thud_in_warren is not 0)[(either: ...$chance_of_thud_in_warren)]
 
-I find myself in the sleeping place. Everything is freshly dug and Rabbits have already repaired all the damage from the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt;. It is as if the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt; had never come. There are fresh Tettles to eat and new piles of fronds and husks to curl up in and sleep on. Tettle husks make the best beds for rabbits. It is easy to forget the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt; when all reminders are so quickly scuttled away. The Warrenherd demands it. Without the Warrenherd rabbits might not do anything other than scuffle, dig and sleep the rest of their time away in the fluffle huddle. 
+I find myself in the sleeping place. Everything is freshly dug and Rabbits have already repaired all the damage from the big&lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt;. It is as if the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt; had never come. There are fresh Tettles to eat and new piles of fronds and husks to curl up in and sleep on. Tettle husks make the best beds for rabbits. It is easy to forget the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt; when all reminders are so quickly scuttled away. The Warrenherd demands it. Without the Warrenherd rabbits might not do anything other than scuffle, dig and sleep the rest of their time away in the fluffle huddle. 
 
 Thanks to the Warenherd everything has returned to the way it was ... like it always does ... as Warrenherd tells us it always will.
 
 I would like to roll into the huddle and forget ... to simply be content with my fellow rabbits... But I cannot. Something is not right and I am worried. I will not find the answer here.
 
-I hop out to the [[Tunnel Hub]]</tw-passagedata><tw-passagedata pid="9" name="The Farm" tags="" position="224,999" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/farm-harvest.png&quot; class=&quot;limit&quot;&gt;
+I hop out to the [[Tunnel Hub]]</tw-passagedata><tw-passagedata pid="9" name="The Farm" tags="" position="224,999" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/farm-harvest.png&quot; class=&quot;limit&quot;&gt;(if: $chance_of_thud_in_warren is not 0)[(either: ...$chance_of_thud_in_warren)]
 The farm stretches out in all directions, rows and rows of tettleplant and lichens stretch out until they recede into the darkness.
 
 Fellow rabbits are working the rows.  Not much needs to be done as tettleplant grows abundantly here and one mature plant can feed a family of rabbits for a few days.
 
-(if: $dug_to_monolith is not 0)[I can head down the tunnel to see [[The Huge Monolith]] again,](else:)[Seeing the rabbits planting and digging makes me want to... [[DIG!!!!-&gt;Dig]],] or go back to the [[↩ Tunnel Hub to search the Warren further-&gt;Tunnel Hub]].</tw-passagedata><tw-passagedata pid="10" name="The River" tags="" position="851,1056" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/river-sit.png&quot; class=&quot;limit&quot;&gt;
+(if: $dug_to_monolith is not 0)[I can head down the tunnel to see [[The Huge Monolith]] again,](else:)[Seeing the rabbits planting and digging makes me want to... [[DIG!!!!-&gt;Dig]],] or go back to the [[↩ Tunnel Hub to search the Warren further-&gt;Tunnel Hub]].</tw-passagedata><tw-passagedata pid="10" name="The River" tags="" position="851,1056" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/river-sit.png&quot; class=&quot;limit&quot;&gt;(if: $chance_of_thud_in_warren is not 0)[(either: ...$chance_of_thud_in_warren)]
 
 I do not know where the river flows to or from.  
 It comes from a tunnel and goes to one.  
@@ -631,7 +686,7 @@ There is an older rabbit, the [[River Rabbit]], who stays here and tends the pla
 
 The weight of the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt; was felt here too.  Now they make little tettleweed shelters for the young kits, and this time it worked.  I see no hurt kittens, just scared ones.  If I don&#39;t do anything will these kits ever know what it&#39;s like to dig and scuffle?
 
-Seeing the young kits in danger makes me want to [[search the Warren-&gt;Tunnel Hub]] and ask around to find out if there&#39;s something I can do to stop the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt; while there&#39;s still time.</tw-passagedata><tw-passagedata pid="12" name="The Warrenherd" tags="" position="983,331" size="200,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/w-mayor.png&quot; class=&quot;img-med&quot;&gt;
+Seeing the young kits in danger makes me want to [[search the Warren-&gt;Tunnel Hub]] and ask around to find out if there&#39;s something I can do to stop the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt; while there&#39;s still time.</tw-passagedata><tw-passagedata pid="12" name="The Warrenherd" tags="" position="983,331" size="200,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/w-mayor.png&quot; class=&quot;img-med&quot;&gt;(if: $chance_of_thud_in_warren is not 0)[(either: ...$chance_of_thud_in_warren)]
 
 The Warrenherd is plenty busy considering things like the future of the Warren already so I am hesitant to disturb him.  When I come in he seems, for a moment, to be resting.  I could [[leave the Warrenherd to his thoughts and explore the rest of the Warren-&gt;Tunnel Hub]] or 
 
@@ -663,15 +718,24 @@ There was another &lt;div class=&quot;thud&quot;&gt;THUD&lt;/div&gt;
 
 [[this time ...-&gt;The Worst One]]  ⟻(click to find out)
 
-&lt;!-- random chance of THUD --&gt;(set: $thud_in_halls to (a: &quot;&quot;,&quot;&quot;,&quot;Another &lt;div class=\&quot;thud\&quot;&gt;THUD&lt;/div&gt; shakes the halls.  
+&lt;!-- random chance of THUD in warren --&gt;(set: $thud_in_warren to (a: &quot;&quot;, &quot;&quot;,&quot;&quot;,&quot;Another &lt;div class=\&quot;thud\&quot;&gt;THUD&lt;/div&gt; shakes the warren.  
+
+Not as bad as the one that woke me up, but I don&#39;t like it.
+&quot;))
+&lt;!-- random chance of THENGG in warren --&gt;(set: $tinggg_in_warren to (a: &quot;&quot;, &quot;&quot;,&quot;&quot;,&quot;A gentle &lt;div class=\&quot;tinggg\&quot;&gt;TINGGG&lt;/div&gt; vibrates the warren.  
+
+Seems better than the &lt;span class=\&quot;thud\&quot;&gt;THUD&lt;/span&gt;, but I still don&#39;t like it.
+&quot;))
+&lt;!-- random chance of THUD in halls --&gt;(set: $thud_in_halls to (a: &quot;&quot;,&quot;&quot;,&quot;Another &lt;div class=\&quot;thud\&quot;&gt;THUD&lt;/div&gt; shakes the halls.  
 
 Some clouds of dust swirl around, but these well-built halls remain intact.
 &quot;))
-&lt;!-- random chance of THENGG --&gt;(set: $tinggg_in_halls to (a: &quot;&quot;,&quot;&quot;,&quot;A gentle &lt;div class=\&quot;tinggg\&quot;&gt;TINGGG&lt;/div&gt; vibrates the halls.  
+&lt;!-- random chance of THENGG in halls --&gt;(set: $tinggg_in_halls to (a: &quot;&quot;,&quot;&quot;,&quot;A gentle &lt;div class=\&quot;tinggg\&quot;&gt;TINGGG&lt;/div&gt; vibrates the halls.  
 
-Some clouds of dust swirl around, but these well-built halls remain intact.
+Seems better than the &lt;span class=\&quot;thud\&quot;&gt;THUD&lt;/span&gt;, but I still don&#39;t like it.
 &quot;))
 (set: $chance_of_thud_in_halls to $thud_in_halls)
+(set: $chance_of_thud_in_warren to $thud_in_warren)
 (set: $diode_is_cleared to 0)
 (set: $shield_refreshed to 0)
 (set: $hatch_opened to 0)
@@ -887,7 +951,7 @@ halls-sw-2.png&quot; class=&quot;limit&quot;&gt;
 This hall is like the others, except there is a strange device here, and in one corner of it, it looks like there&#39;s a window to another world and a prominent paw print. (if: $shield_refreshed is not 0)[The paw print is glowing, and the window shines brightly. THE SHELL IS THICKENED!
 ](else:)[[I could touch my tiny paw to the huge paw print.]&lt;activateshield|]
 
-(click: ?activateshield)[(set: $shield_refreshed to true)(set: $chance_of_thud_in_halls to $thinggg_in_halls)(show: ?pressing)(replace: ?activateshield)[The paw print is glowing, and the window shines brightly.]]{
+(click: ?activateshield)[(set: $shield_refreshed to true)(set: $chance_of_thud_in_halls to $thinggg_in_halls)(set: $chance_of_thud_in_warren to $thinggg_in_warren)(show: ?pressing)(replace: ?activateshield)[The paw print is glowing, and the window shines brightly.]]{
 }[
 &lt;div class=&quot;pulse-in&quot;&gt;In the distance, I hear a mighty crackling, and the window to another place shines so much it hurts my eyes for a moment. Something in the window has changed.[[ Look at the window-&gt;Master Viewscreen]]&lt;/div&gt;](pressing|{
 }
@@ -1404,7 +1468,7 @@ You are home.
 
 You have found the right place.
 
-[[Rewind to the moment before this happened?-&gt;Tristan&#39;s Throne]]</tw-passagedata><tw-passagedata pid="95" name="Ürs Title Card" tags="" position="99,53" size="200,100">{
+[[Rewind to the moment before this happened?-&gt;Tristan&#39;s Throne]]</tw-passagedata><tw-passagedata pid="95" name="Ürs Title Card" tags="" position="102,53" size="200,100">{
 &lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
 &lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-126698334-1&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -1414,14 +1478,37 @@ You have found the right place.
 
   gtag(&#39;config&#39;, &#39;UA-126698334-1&#39;);
 
+function findGetParameter(parameterName) {
+    var result = null,
+        tmp = [];
+    var items = location.search.substr(1).split(&quot;&amp;&quot;);
+    for (var index = 0; index &lt; items.length; index++) {
+        tmp = items[index].split(&quot;=&quot;);
+        if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+    }
+    return result;
+}
+
 document.addEventListener(&#39;click&#39;, function (event) {
 
 	if (event.target.matches(&#39;tw-link&#39;)) {
 		var passageName = event.target.getAttribute(&#39;passage-name&#39;);
-		gtag(&#39;event&#39;, &#39;Navigation&#39;, {
-		  &#39;event_label&#39;: passageName,
-		  &#39;event_category&#39;: &#39;Click&#39;,
-		});
+		if (findGetParameter(&#39;rabbit&#39;) == &#39;chris&#39;)
+			gtag(&#39;event&#39;, &#39;Navigation&#39;, {
+		  		&#39;event_label&#39;: passageName,
+		  		&#39;event_category&#39;: &#39;ChrisRabbitClick&#39;,
+			});
+		if (findGetParameter(&#39;rabbit&#39;) == &#39;daniel&#39;) {
+			gtag(&#39;event&#39;, &#39;Navigation&#39;, {
+		  		&#39;event_label&#39;: passageName,
+		  		&#39;event_category&#39;: &#39;DanielRabbitClick&#39;,
+			});		
+		} else {
+			gtag(&#39;event&#39;, &#39;Navigation&#39;, {
+		  		&#39;event_label&#39;: passageName,
+		  		&#39;event_category&#39;: &#39;GuestClick&#39;,
+			});			
+		}
 	}
 
 }, false);  
@@ -1430,10 +1517,10 @@ document.addEventListener(&#39;click&#39;, function (event) {
 &lt;div id=&quot;credits&quot;&gt;(align: &quot;=&gt;&lt;=&quot;)[&lt;span style=&quot;font-size:1.7em;&quot;&gt;a gamestorybook by&lt;/span&gt;
 
 
-&lt;span class=&quot;urspeak&quot;&gt;Christopher Hayes &lt;/span&gt;&lt;span class=&quot;urspeak&quot; style=&quot;font-size:1em !important;&quot;&gt;&amp;&lt;/span&gt;&lt;span class=&quot;urspeak&quot;&gt;Daniel Talsky&lt;/span&gt;]&lt;/div&gt;
+&lt;span class=&quot;rabbits&quot;&gt;Christopher Hayes &lt;/span&gt;&lt;span class=&quot;rabbits&quot; style=&quot;font-size:1em !important;&quot;&gt;&amp;&lt;/span&gt;&lt;span class=&quot;rabbits&quot;&gt;Daniel Talsky&lt;/span&gt;]&lt;/div&gt;
 
 
-&lt;div id=&quot;start&quot;&gt;(align: &quot;=&gt;&lt;=&quot;)[[[START ÜRS-&gt;The Thud]]]&lt;/div&gt;
+&lt;div id=&quot;start&quot;&gt;(align: &quot;=&gt;&lt;=&quot;)[[[I WANT TO PLAY NOW!-&gt;The Thud]]]&lt;/div&gt;
 
 
 &lt;div id=&quot;feedback&quot;&gt;(align: &quot;=&gt;&lt;=&quot;)[&lt;a href=&quot;mailto:urs@tinyplace.org&quot;&gt;Feedback&lt;/a&gt;
