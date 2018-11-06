@@ -528,9 +528,13 @@ tw-icon.redo {}
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">window.onbeforeunload = function() {
    return "Are you sure you want to leave the story?   You will lose all progress.";
 };
+
+
 
 </script><tw-passagedata pid="1" name="Upper Hub" tags="" position="1620,1007" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/w-3-tunnels-b.png&quot; class=&quot;limit&quot;&gt;
 (if: $diode_is_cleared is not 0)[ I hear a crackling sound coming from the tunnels above and behind me. The air feels sharp and prickly on my fur and it makes my nose twitch. I think this means the power is working! Maybe now I can thicken the shell.
@@ -564,7 +568,7 @@ A dim and glowing passageway leads down to some larger place.
 
 [[I can only descend-&gt;Tristan&#39;s Vestibule]] 
 
-or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="6" name="Ebony&#39;s Passage" tags="" position="5016,1919" size="100,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/Ur-Stairs-1.png&quot;  class=&quot;img-gen&quot;&gt;
+or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="6" name="Ebony&#39;s Passage" tags="" position="5016,1917" size="100,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/Ur-Stairs-1.png&quot;  class=&quot;img-gen&quot;&gt;
 
 A passageway leads ever downward.
 
@@ -627,7 +631,8 @@ The Warrenherd is so certain of his opinion that he&#39;s not able to hear me, b
 
 I have reached the end of these Halls.  There is a great circle here, that looks like a gateway to another place.  It is adorned with symbols of many rabbits and paws, and a lever that looks like it&#39;s made to open the gateway.
 
-I can [leap up onto the great handle to see if I can somehow move it]&lt;hatchleap|, I can [[press my paw to the huge paw print-&gt;Opened Hatch]], 
+* I can [leap up onto the great handle to see if I can somehow move it]&lt;hatchleap|
+* I can [[press my paw to the huge paw print-&gt;Opened Hatch]]
 [
 &lt;div class=&quot;pulse-in&quot;&gt;I make the mightiest of leaps, but I simply bounce off the handle, bruising my poor rabbit belly in the process.&lt;/div&gt;
 ](hatchbounce|
@@ -719,18 +724,14 @@ I am having so much fun, maybe I should
 
 The River Rabbit regards me a little suspiciously, but seems willing to help me.
 
-What should I say?
+What should I say?{
 
-{|thudquestion&gt;[&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;Old rabbit, I say, the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt; is upon us.  I fear that we will be shaken such that the dirt collapses all around us and no more rabbits are ever born.&lt;/span&gt;&lt;/div&gt;]
-|thudresponse)[&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;riverrabbitspeak&quot;&gt;It&#39;s true.  I&#39;ve never seen such a thing.  Maybe the river is causing it, I just can&#39;t know.  I&#39;m ready to be a dirt rabbit, if need be.  If you think more rabbits need to be born then I guess you can try and do something about it.  I don&#39;t know of anything else to try but an old place, across the river.  An old storage space of rabbits.  Used to put things there until it was decided, &quot;no more&quot;, because of danger, and because of the Ür-rabbits and their dangers.&lt;/span&gt;&lt;/div&gt;](click: ?thudquestion)[ (show: ?thudresponse) ]
+}|riverquestion&gt;[&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;Why do you stay here, at the river.&lt;/span&gt;&lt;/div&gt;]|riverresponse)[&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;riverrabbitspeak&quot;&gt;River changes all the time and never changes.  There have been times I wished to jump in, and find whatever place it goes to, or comes from, but it is one of the great mysteries of rabbits.&lt;/span&gt;&lt;/div&gt;](click: ?riverquestion)[(show: ?riverresponse)]{
 
-|ursquestion&gt;[&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;What about the places of the old Ür-rabbits, is it possible they are responsible for the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt;&lt;/div&gt;]
-|ursresponse)[&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;riverrabbitspeak&quot;&gt;Across the river is a place where rabbits used to store things.  Went to someplace regular rabbits didn&#39;t make.  There are real dangers there, so I would not think it wise to even take a peep.  Ye go seek out thee places of the Ürs?  That much I will advise deeply against young one.&lt;/span&gt;&lt;/div&gt;](click: ?ursquestion)[ (show: ?ursresponse) ]
+or
 
-|riverquestion&gt;[&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;Why do you stay here, at the river.&lt;/span&gt;&lt;/div&gt;]
-|riverresponse)[&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;riverrabbitspeak&quot;&gt;River changes all the time and never changes.  There have been times I wished to jump in, and find whatever place it goes to, or comes from, but it is one of the great mysteries of rabbits.&lt;/span&gt;&lt;/div&gt;](click: ?riverquestion)[ (show: ?riverresponse) ]
-
-Tired of speaking to the River Rabbit, [[↩ I go back to the edge of The River-&gt;The River]]}</tw-passagedata><tw-passagedata pid="21" name="Dig Deeper" tags="" position="449,1402" size="100,100">&lt;div class=&quot;dig-contain&quot;&gt;&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/idil-dig-2.png&quot; class=&quot;img-dig&quot;&gt;
+}|thudquestion&gt;[&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;Old rabbit, I say, the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt; is upon us.  I fear that we will be shaken such that the dirt collapses all around us and no more rabbits are ever born.&lt;/span&gt;&lt;/div&gt;](click: ?thudquestion)[(display: &quot;More River Rabbit Talk&quot;)]
+Tired of speaking to the River Rabbit, [[↩ I go back to the edge of The River-&gt;The River]]</tw-passagedata><tw-passagedata pid="21" name="Dig Deeper" tags="" position="449,1402" size="100,100">&lt;div class=&quot;dig-contain&quot;&gt;&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/idil-dig-2.png&quot; class=&quot;img-dig&quot;&gt;
 &lt;div class=&quot;bkg-tunnel-1&quot;&gt;
 &lt;div class=&quot;dig&quot;&gt;I DIG!&lt;/div&gt;
 
@@ -805,10 +806,11 @@ Now that I&#39;m here, I see a column of tettleplant roots that I could not see 
 or [[↩ take a deep breath and jump back across to the warren-&gt;The River]]</tw-passagedata><tw-passagedata pid="28" name="The Huge Monolith" tags="" position="953,2043" size="100,100">&lt;div class=&quot;dig-contain&quot;&gt;&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/idil-dig-6.png&quot; class=&quot;img-dig&quot;&gt;
 &lt;div class=&quot;bkg-tunnel-6&quot;&gt;
 
-(set: $dug_to_monolith to true)The more I dig, the more of this giant thing of stone I uncover.  It is some kind of rabbit.  I have heard tails of long and large old rabbits but most rabbits don&#39;t care about old stories of Ürs.  We have what we need, and why would rabbits think about such things.  They&#39;re old stories and old ways, that don&#39;t touch us.  I touch the huge thing, and ...
-&lt;div class=&quot;stop-digging&quot;&gt;[[I am very tired, so I stop digging, and when I wake up I am...-&gt;Sleeping Quarters]]&lt;/div&gt;
+(if: $dug_to_monolith is not 0)[Here again, before me, sits the monolith.](else:)[The more I dig, the more of this giant thing of stone I uncover.  It is some kind of rabbit.  I have heard tails of long and large old rabbits but most rabbits don&#39;t care about old stories of Ürs.  We have what we need, and why would rabbits think about such things.  They&#39;re old stories and old ways, that don&#39;t touch us.]
+
+&lt;div class=&quot;stop-digging&quot;&gt;(if: $dug_to_monolith is not 0)[[[Climb back out to The Farm-&gt;The Farm]]](else:)[ I touch the huge thing, and ... [[I am very tired, so I stop digging, and when I wake up I am...-&gt;Sleeping Quarters]]]&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="Entrance to the Halls of the Ürs" tags="" position="2124,2011" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/halls-door-1.png&quot; class=&quot;limit&quot;&gt;
+&lt;/div&gt;(set: $dug_to_monolith to true)</tw-passagedata><tw-passagedata pid="29" name="Entrance to the Halls of the Ürs" tags="" position="2124,2011" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/halls-door-1.png&quot; class=&quot;limit&quot;&gt;
 
 The natural tunneling of rabbits gives way to wide, tall, smooth walls of white stone.  Some remnants of what rabbits used to store here are scattered about carelessly, like rabbits left in the midst of gathering them up. [[↩ I can head back towards the Warren-&gt;Upper Hub]]
 
@@ -860,7 +862,10 @@ I am in the opening of a cavernous room, made entirely of white stone.
 </tw-passagedata><tw-passagedata pid="36" name="Bottom Hall" tags="" position="2423,2206" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/
 w-object.png&quot; class=&quot;limit&quot;&gt;
 (if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
-This room has an amazing device in it, and is the most brightly colored of all these huge rooms. In the center, on a raised platform, a large box with symbols on it hums and small amounts of steam curl from it.  It has places clearly meant for a paw to go but the paw prints look double or triple the width of my own.
+This room has an amazing device in it, and is the most brightly colored of all these huge rooms. In the center, on a raised platform, a large box with symbols on it hums and small amounts of steam curl from it.  It has a cube within a cube, with bright paw prints on opposite faces. The paw prints look double or triple the width of my own.
+
+* (link: &quot;I can try to place my paw in the paw print on the side facing me&quot;)[&lt;div class=&quot;pulse-in&quot;&gt;When I reach for the print, my paw goes right through the outer cube.  It is made of nothing but light.  My paw settles into the inner cube&#39;s print.  The light stirs, but nothing happens.&lt;/div&gt;(set: $has_touched_the_cube to true)]
+* (link: &quot;I can try to place my paw in the paw print on the opposite side&quot;)[&lt;div class=&quot;pulse-in&quot;&gt;When my paw settles into the far side cube, nothing happens.&lt;/div&gt;(set: $has_touched_the_cube to true)]
 
 [[In a room towards the Warren-&gt;Bottom Left Hall]] I see a boxy device and (if: $diode_is_cleared is not 0)[[[in a corner room nearby-&gt;Usable Shield Room]]](else:)[[[in a corner room nearby-&gt;Unpowered Shield Room]]] I see a very similar box, but I can hear it from here, whirring softly.
 
@@ -1023,7 +1028,7 @@ The passageway leads down to the beginning of a huge place.  Giant rabbit statue
 
 I [[continue on to see what this place holds-&gt;Ebony&#39;s Palace]] 
 
-or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="56" name="Ebony&#39;s Throne" tags="" position="4972,2689" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/first-of-the-Ur.png&quot;  class=&quot;ur-throne&quot;&gt;(set: $ur_visited to true)(set: $ebony_visited to true)(set: $ebony_advice_about_rubble to true)
+or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-passagedata><tw-passagedata pid="56" name="Ebony&#39;s Throne" tags="" position="4973,2690" size="200,200">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/first-of-the-Ur.png&quot;  class=&quot;ur-throne&quot;&gt;(set: $ur_visited to true)(set: $ebony_visited to true)(set: $ebony_advice_about_rubble to true)
 
 &lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;urspeak&quot;&gt;Young rabbit of the underholes, I am the one who is Ebony&lt;span&gt;&lt;/div&gt;{
 
@@ -1033,7 +1038,9 @@ or [[↩ Turn around and go back out to the Courtyard-&gt;Ürs Courtyard]]</tw-p
 
 }&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;Anything would help&lt;/span&gt;&lt;/div&gt;{
 
-}&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;urspeak&quot;&gt;You need to turn the shell to this place on?  There is no point!  It is only a rock.  If you insist, uncover the generator diode at the foot of the transformer. From it the POWER will flow. The transformer is atop the idol of the primitive underhole rabbits. I am sure of it. I really don&#39;t know. If you care so much, I can [[take you there with my mind.-&gt;Portal to Ledge]] and you can find out for yourself. Or not. &lt;span&gt;&lt;/div&gt;{
+}&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;urspeak&quot;&gt;You need to turn the shell to this place on?  There is no point!  It is only a rock.  If you insist, uncover the generator diode at the foot of the transformer. From it the POWER will flow. The transformer is atop the idol of the primitive underhole rabbits. I am sure of it. I really don&#39;t know. If you care so much, I can take you there with my mind, and you can find out for yourself. Or not.&lt;/span&gt;&lt;/div&gt;{
+
+(click: &quot;take you there with my mind&quot;)[(show: ?areyousure)][&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;urspeak&quot;&gt;Are you sure about that small rabbit?&lt;/span&gt;&lt;/div&gt; &lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;[[Yes.-&gt;Portal to Ledge]]&lt;/span&gt;&lt;/div&gt;](areyousure|
 
 }&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;urspeak&quot;&gt;
 Just remember, for every rock you move, you are also moved.  There is a power in stillness.  Don&#39;t think you can just shove things to and fro. 
@@ -1090,12 +1097,11 @@ The giant rocks just bounce off.  Perhaps the Warren is safe now, but I can&#39;
 &lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[↑-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[←-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="62" name="Unpowered Shield Room" tags="" position="2745,2256" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/
 halls-sw-1.png&quot; class=&quot;limit&quot;&gt;
 (if: $chance_of_thud_in_halls is not 0)[(either: ...$chance_of_thud_in_halls)]
-This hall is like the others, except there is a strange device here, and in one corner of it, it looks like there&#39;s a window to another world and a prominent paw print. [[I could touch my tiny paw to the huge paw print.]&lt;activateshield|]
-(click: ?activateshield)[(show: ?pressing)]{
+This hall is like the others, except there is a strange device here, and in one corner of it, it looks like there&#39;s a window to another world and a prominent paw print. [[I could touch my tiny paw to the huge paw print ]&lt;activateshield|](click: ?activateshield)[(show: ?pressing)]{
 }[
 &lt;div class=&quot;pulse-in&quot;&gt;In the distance, I hear the beginning of a crackling sound, but then the sound dies down.  I don&#39;t think it did what it was supposed to do.  There&#39;s got to be some way I can get it to work.  I wonder if the Ürs would know.  I wonder if there even **are** any Ürs.&lt;/div&gt;
 ](pressing|{
-}[[I could move closer to get a look at the window-&gt;Shield THUD Viewscreen]]
+} or [[I could move closer to get a look at the window.-&gt;Shield THUD Viewscreen]]
 
 &lt;section class=&quot;template ursmap&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td class=&quot;majestic&quot;&gt;&lt;div&gt;▭&lt;/div&gt;&lt;/td&gt;&lt;td&gt;[[↑-&gt;Right Hall]]&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;▭&lt;/td&gt;&lt;td&gt;[[←-&gt;Bottom Hall]]&lt;/td&gt;&lt;td&gt;▣&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;</tw-passagedata><tw-passagedata pid="63" name="Pushin&#39; Rubble" tags="" position="2103,448" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/ledge-norubble-diode.png&quot; class=&quot;img-gen&quot;&gt;
 
@@ -1195,15 +1201,11 @@ or, [[↩ step away from the device-&gt;Top Hall]]{
 }
 </tw-passagedata><tw-passagedata pid="72" name="The Rabbits are Saved" tags="" position="11,1089" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/thin-ears.png&quot; class=&quot;limit&quot;&gt;
 
-It has now been so many growing cycles without the THUD that I no longer count them. Most of the rabbits have already forgotten. New kits are being born everywhere in the Warren. They are digging and scuffling without knowledge or fear of the THUD. 
+The fur on my ears grows thin. It has now been so many growing cycles without the THUD that I no longer count them. Many of the rabbits have already forgotten. New kits are being born everywhere in the Warren. They are digging and scuffling without knowledge or fear of the THUD. 
 
-The fur on my ears grows thin. 
+(if: $talked_to_the_river_rabbit is not 0)[The River Rabbit was right. “If you think more rabbits need to be born then I guess you can try and do something about it.” was the advice that wise old rabbit gave me.  
 
-The (if: $returned_to_river is not 0)[River Rabbit](else: )[[[River Rabbit-&gt;River Rabbit Conversation]]] was right. “If you think more rabbits need to be born then I guess you can try and do something about it.” was the advice that wise old rabbit gave me.
-
-Well, I did something about it.
-
-
+Well, I did something about it.](else: )[No one else in The Warren seemed to care.  No one cared about the world outside The Warren, no one cared about the fate of all the young kittens.  I did.]
 
 [[Start over?-&gt;The Thud]]
 
@@ -1231,9 +1233,9 @@ Maybe with the shell thickened, you could have moved the Warren to safety, I mea
 [[Rewind to the moment before this happened?-&gt;Green Zone Steering Device]]</tw-passagedata><tw-passagedata pid="76" name="Portal to Ledge" tags="" position="3221,3394" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/portal.png&quot;  class=&quot;ur-throne&quot;&gt;
 
 One moment I am speaking with the Ür-rabbit Ebony and then the next
-[[I am in some strange place far away.-&gt;Upper Ledge]]</tw-passagedata><tw-passagedata pid="77" name="Credits?" tags="" position="15,1220" size="100,100">Made by Christopher Hayes (&lt;a href=&quot;http://eptilemind.com&quot;&gt;&lt;span style=&quot;color:#fff;&quot;&gt;reptilemind.com&lt;/span&gt;&lt;/a&gt;), and Daniel Talsky (&lt;a href=&quot;http://danieltalsky.com&quot;&gt;&lt;span style=&quot;color:#fff;&quot;&gt;danieltalsky.com&lt;/span&gt;&lt;/a&gt;), two guys who are friends.  They just did this so they would have something to do besides just watch Sci-Fi and Better Call Saul and drink beer.  No rabbits were hurt in the making of this interactive-ish fiction-ish.
+[[I am in some strange place far away.-&gt;Upper Ledge]]</tw-passagedata><tw-passagedata pid="77" name="Credits?" tags="" position="15,1220" size="100,100">Made by Christopher Hayes (&lt;a href=&quot;http://eptilemind.com&quot;&gt;&lt;span style=&quot;color:#fff;&quot;&gt;reptilemind.com&lt;/span&gt;&lt;/a&gt;), and Daniel Talsky (&lt;a href=&quot;http://danieltalsky.com&quot;&gt;&lt;span style=&quot;color:#fff;&quot;&gt;danieltalsky.com&lt;/span&gt;&lt;/a&gt;), two guys who are friends.  They just did this so they would have something to do besides just watch Sci-Fi and Better Call Saul. No rabbits were hurt in the making of this interactive-ish fiction-ish.
 
-Seriously though, thanks for playing.  They barely do creative work that&#39;s not for money anymore, because if people aren&#39;t paying, they won&#39;t even look at it, especially weird story games.  Daniel had to offer to go buy cigarettes for his girlfriend just to get her to playtest it once.  
+Seriously though, thanks for playing. They barely do creative work that&#39;s not for money anymore, because if people aren&#39;t paying, they won&#39;t even look at it, especially weird story games. 
 
 Thanks to this contest though, real human beings just like you willingly tried it out and maybe even gave us feedback, which is about the maximum people can hope for if they do any kind of art.
 
@@ -1300,8 +1302,7 @@ I return to the warren and finally, I curl up in the fluffle huddle and sleep.
 
 Everyrabbit knows the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt; has stopped, but none know why.  
 
-[[No one needs to know...-&gt;One Last Adventure]]</tw-passagedata><tw-passagedata pid="84" name="One Last Adventure" tags="" position="270,1836" size="100,100">
-except maybe one ... 
+(if: $talked_to_the_river_rabbit is not 0)[[[No one needs to know...-&gt;One Last Adventure]]](else: )[[[No one needs to know...-&gt;The Rabbits are Saved]]]</tw-passagedata><tw-passagedata pid="84" name="One Last Adventure" tags="" position="270,1836" size="100,100">except maybe one ... 
 
 * [[I tell the old River Rabbit about my adventure, and how I saved the Warren-&gt;River Rabbit Conversation]]
 * [[I say nothing and let the old rabbit be.-&gt;The Rabbits are Saved]]</tw-passagedata><tw-passagedata pid="85" name="River Rabbit Conversation" tags="" position="392,1877" size="200,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/river-rabbit-convo-cu.png&quot; class=&quot;limit&quot;&gt;
@@ -1331,11 +1332,9 @@ The old rabbit takes his time.
 
 I lead the River Rabbit through all the halls of the Ürs. The old rabbit hops silently beside me in wonder.
 
-When we reach the brightly colored object, we pause. 
+When we reach the chamber with a brightly colored object, we pause.&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;riverrabbitspeak&quot;&gt;Perhaps I could place my paw on one side, and you could place your paw on the other?&lt;/span&gt;&lt;/div&gt;These are the first words the old rabbit speaks since entering the halls.
 
-&quot;Perhaps together, you and I, we can move the paw&quot;, the first words the old rabbit speaks since entering the halls.
-
-[[Together we place our tiny paws on the giant paw print and with all our rabbit might, we push...-&gt;Secret Cave]]</tw-passagedata><tw-passagedata pid="90" name="Secret Cave" tags="" position="272,2188" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/w-secret-cave.png&quot; class=&quot;limit&quot;&gt;
+[[I stand on the far side, and he stands on the near side.  Together we press our paws into the cube...-&gt;Secret Cave]]</tw-passagedata><tw-passagedata pid="90" name="Secret Cave" tags="" position="272,2188" size="100,100">&lt;img src=&quot;https://d2g9mc6d8hcbxp.cloudfront.net/images/w-secret-cave.png&quot; class=&quot;limit&quot;&gt;
 
 A tunnel at the far end of the hall that I had paid no attention to before, suddenly bursts with light. 
 
@@ -1432,7 +1431,7 @@ document.addEventListener(&#39;click&#39;, function (event) {
 
 
 &lt;div id=&quot;feedback&quot;&gt;(align: &quot;=&gt;&lt;=&quot;)[&lt;a href=&quot;mailto:urs@tinyplace.org&quot;&gt;Feedback&lt;/a&gt;
-[[Credits-&gt;Credits?]]]&lt;/div&gt;
+[[Credits-&gt;Credits]]]&lt;/div&gt;
 &lt;div id=&quot;copyright&quot;&gt;(align: &quot;=&gt;&lt;=&quot;)[
 &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-nc-nd/4.0/&quot;&gt;&lt;img alt=&quot;Creative Commons License&quot; style=&quot;border-width:0&quot; src=&quot;https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png&quot; /&gt;&lt;/a&gt;&lt;br /&gt;This work is licensed under a &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-nc-nd/4.0/&quot;&gt;Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License&lt;/a&gt;.]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="96" name="Siobhan: Remains of a Great City" tags="" position="3610,2794" size="100,100">&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;urspeak&quot;&gt;It is the remains of a great city.  We were once quite beautiful and accomplished.  We created this place, and even your people in a long ago.&lt;span&gt;&lt;/div&gt;{
 
@@ -1447,7 +1446,7 @@ Our shell... is failing.  With each &lt;span class=&quot;thud&quot;&gt;THUD&lt;/
 Our moving time is done.  We are all in our sitting time.  Our breeding time never was, and the breeding time of the Meis long done.
 &lt;span&gt;&lt;/div&gt;{
 
-&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;I want to thicken the shell, then.&lt;/span&gt;&lt;/div&gt;{
+}&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;I want to thicken the shell, then.&lt;/span&gt;&lt;/div&gt;{
 
 }&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;urspeak&quot;&gt;
 To THICKEN the SHELL one must have POWER. That POWER I do not possess. EBONY is of POWER. Go and speak with EBONY. If EBONY will hear you. EBONY may not. With power, ACTIVATE and the shell will THICKEN of its own. It is as it must be. It is as I have made. Be wary, the SHELL must be thick  before STEERING Adrastea, else asteroids will destroy Adrastea before you make it to safety.  
@@ -1457,7 +1456,15 @@ To THICKEN the SHELL one must have POWER. That POWER I do not possess. EBONY is 
 You are the same cold stone as me.  It is not necessary to persist in bending your fate.  Rest, young rabbit.  It might just work out.  
 &lt;span&gt;&lt;/div&gt;{
 
-}&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;[[I can&#39;t see why it would matter, I guess.-&gt;Dying from getting talked out of it by Sioban for real]]&lt;/span&gt;&lt;/div&gt;</tw-passagedata></tw-storydata>
+}&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;[[I can&#39;t see why it would matter, I guess.-&gt;Dying from getting talked out of it by Sioban for real]]&lt;/span&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="97" name="More River Rabbit Talk" tags="" position="1033,1356" size="200,100">(set: $talked_to_the_river_rabbit to true)&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;riverrabbitspeak&quot;&gt;It&#39;s true.  I&#39;ve never seen such a thing.  Maybe the river is causing it, I just can&#39;t know. 
+
+I&#39;m ready to be a dirt rabbit, if need be.  If you think more rabbits need to be born then I guess you can try and do something about it.  I don&#39;t know of anything else to try but an old place, across the river.  It&#39;s not a good place.  There&#39;s some kind of tower there, and further, the places of the Ür-rabbits.&lt;/span&gt;&lt;/div&gt;{
+
+}|ursquestion&gt;[&lt;div class=&quot;speech self&quot;&gt;&lt;span class=&quot;herospeak&quot;&gt;What about the places of the old Ür-rabbits, is it possible they are responsible for the &lt;span class=&quot;thud&quot;&gt;THUD&lt;/span&gt;?  A tower?  What is past the river?&lt;/div&gt;]|ursresponse)[&lt;div class=&quot;speech other&quot;&gt;&lt;span class=&quot;riverrabbitspeak&quot;&gt;Past the river is a place like you&#39;ve never seen.  A rabbit tower, and further, the places of the Ür-rabbits.  The tower itself is terrifying.  I never crossed the threshold of the Ür-rabbits, and I don&#39;t know if it&#39;s wise to do so.  If you do, come back and tell me what you saw.&lt;/span&gt;&lt;/div&gt;](click: ?ursquestion)[ (show: ?ursresponse) ]</tw-passagedata><tw-passagedata pid="98" name="Credits" tags="" position="393,22" size="100,100">Made by Christopher Hayes (&lt;a href=&quot;http://eptilemind.com&quot;&gt;&lt;span style=&quot;color:#fff;&quot;&gt;reptilemind.com&lt;/span&gt;&lt;/a&gt;), and Daniel Talsky (&lt;a href=&quot;http://danieltalsky.com&quot;&gt;&lt;span style=&quot;color:#fff;&quot;&gt;danieltalsky.com&lt;/span&gt;&lt;/a&gt;), two guys who are friends.  They just did this so they would have something to do besides just watch Sci-Fi and Better Call Saul and drink beer.  No rabbits were hurt in the making of this interactive-ish fiction-ish.
+
+To contact, email &lt;a href=&quot;mailto:urs@tinyplace.org&quot;&gt;&lt;span style=&quot;color:#fff;&quot;&gt;urs@tinyplace.org&lt;/span&gt;&lt;/a&gt;.
+
+[[Play Ürs-&gt;Ürs Title Card]]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
