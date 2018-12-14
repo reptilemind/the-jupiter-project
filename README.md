@@ -1,8 +1,10 @@
-# The Jupiter Project
+# The Jupiter Project: rs Source
 
-This is definitely not an ifconf work
+This is the public source code for rs, the 2018
+Interactive Fiction Competition entry by Christopher 
+Hayes and Daniel Talsky.
 
-This is _made_ by *Chris* and *Daniel*
+rs placed 8 of 77 in the IFComp
 
 ### Instructions for getting the newest version in the editor:
 
